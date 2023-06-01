@@ -1,0 +1,1015 @@
+2023-06-01T10:30:10+00:00 CRITICAL Uncaught Error: Call to undefined function WC_Product_Query() in /var/www/html/wp-content/plugins/offers/admin/class-offers-admin.php:116
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(308): Offers_Admin->crb_attach_theme_options('')
+#1 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /var/www/html/wp-content/plugins/offers/vendor/htmlburger/carbon-fields/core/Loader/Loader.php(113): do_action('carbon_fields_r...')
+#4 /var/www/html/wp-includes/class-wp-hook.php(308): Carbon_Fields\Loader\Loader->trigger_fields_register('')
+#5 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#6 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#7 /var/www/html/wp-settings.php(623): do_action('init')
+#8 /var/www/html/wp-config.php(136): require_once('/var/www/html/w...')
+#9 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#10 /var/www/html/wp-admin/admin-ajax.php(22): require_once('/var/www/html/w...')
+#11 {main}
+  thrown in /var/www/html/wp-content/plugins/offers/admin/class-offers-admin.php on line 116
+
+2023-06-01T11:11:26+00:00 CRITICAL Uncaught Error: Cannot use object of type WP_Post as array in /var/www/html/wp-content/plugins/offers/admin/class-offers-admin.php:135
+Stack trace:
+#0 [internal function]: Offers_Admin->{closure}(Object(WP_Post))
+#1 /var/www/html/wp-content/plugins/offers/admin/class-offers-admin.php(137): array_map(Object(Closure), Array)
+#2 /var/www/html/wp-includes/class-wp-hook.php(308): Offers_Admin->crb_attach_theme_options('')
+#3 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#4 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#5 /var/www/html/wp-content/plugins/offers/vendor/htmlburger/carbon-fields/core/Loader/Loader.php(113): do_action('carbon_fields_r...')
+#6 /var/www/html/wp-includes/class-wp-hook.php(308): Carbon_Fields\Loader\Loader->trigger_fields_register('')
+#7 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#8 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#9 /var/www/html/wp-settings.php(623): do_action('init')
+#10 /var/www/html/wp-config.php(136): require_once('/var/www/html/w...')
+#11 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#12 /var/www/html/wp-admin/admin.php(34): require_once('/var/www/html/w...')
+#13 {main}
+  thrown in /var/www/html/wp-content/plugins/offers/admin/class-offers-admin.php on line 135
+
+2023-06-01T11:11:27+00:00 CRITICAL Uncaught Error: Cannot use object of type WP_Post as array in /var/www/html/wp-content/plugins/offers/admin/class-offers-admin.php:135
+Stack trace:
+#0 [internal function]: Offers_Admin->{closure}(Object(WP_Post))
+#1 /var/www/html/wp-content/plugins/offers/admin/class-offers-admin.php(137): array_map(Object(Closure), Array)
+#2 /var/www/html/wp-includes/class-wp-hook.php(308): Offers_Admin->crb_attach_theme_options('')
+#3 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#4 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#5 /var/www/html/wp-content/plugins/offers/vendor/htmlburger/carbon-fields/core/Loader/Loader.php(113): do_action('carbon_fields_r...')
+#6 /var/www/html/wp-includes/class-wp-hook.php(308): Carbon_Fields\Loader\Loader->trigger_fields_register('')
+#7 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#8 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#9 /var/www/html/wp-settings.php(623): do_action('init')
+#10 /var/www/html/wp-config.php(136): require_once('/var/www/html/w...')
+#11 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#12 /var/www/html/wp-blog-header.php(13): require_once('/var/www/html/w...')
+#13 /var/www/html/index.php(17): require('/var/www/html/w...')
+#14 {main}
+  thrown in /var/www/html/wp-content/plugins/offers/admin/class-offers-admin.php on line 135
+
+2023-06-01T11:32:44+00:00 CRITICAL Uncaught Error: Object of class WP_Term could not be converted to string in /var/www/html/wp-content/plugins/offers/vendor/htmlburger/carbon-fields/core/Field/Predefined_Options_Field.php:129
+Stack trace:
+#0 /var/www/html/wp-content/plugins/offers/vendor/htmlburger/carbon-fields/core/Field/Predefined_Options_Field.php(129): strval(Object(WP_Term))
+#1 /var/www/html/wp-content/plugins/offers/vendor/htmlburger/carbon-fields/core/Field/Predefined_Options_Field.php(107): Carbon_Fields\Field\Predefined_Options_Field->parse_options(Array)
+#2 /var/www/html/wp-content/plugins/offers/vendor/htmlburger/carbon-fields/core/Field/Select_Field.php(54): Carbon_Fields\Field\Predefined_Options_Field->get_options_values()
+#3 /var/www/html/wp-content/plugins/offers/vendor/htmlburger/carbon-fields/core/Field/Field.php(1034): Carbon_Fields\Field\Select_Field->get_formatted_value()
+#4 /var/www/html/wp-content/plugins/offers/vendor/htmlburger/carbon-fields/core/Field/Select_Field.php(37): Carbon_Fields\Field\Field->to_json(true)
+#5 /var/www/html/wp-content/plugins/offers/vendor/htmlburger/carbon-fields/core/Container/Container.php(815): Carbon_Fields\Field\Select_Field->to_json(true)
+#6 /var/www/html/wp-content/plugins/offers/vendor/htmlburger/carbon-fields/core/Loader/Loader.php(278): Carbon_Fields\Container\Container->to_json(true)
+#7 /var/www/html/wp-content/plugins/offers/vendor/htmlburger/carbon-fields/core/Loader/Loader.php(222): Carbon_Fields\Loader\Loader->get_json_data()
+#8 /var/www/html/wp-includes/class-wp-hook.php(308): Carbon_Fields\Loader\Loader->enqueue_assets('')
+#9 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#10 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#11 /var/www/html/wp-admin/admin-footer.php(95): do_action('admin_print_foo...')
+#12 /var/www/html/wp-admin/admin.php(297): require_once('/var/www/html/w...')
+#13 {main}
+  thrown in /var/www/html/wp-content/plugins/offers/vendor/htmlburger/carbon-fields/core/Field/Predefined_Options_Field.php on line 129
+
+2023-06-01T11:32:54+00:00 CRITICAL Uncaught Error: Object of class WP_Term could not be converted to string in /var/www/html/wp-content/plugins/offers/vendor/htmlburger/carbon-fields/core/Field/Predefined_Options_Field.php:129
+Stack trace:
+#0 /var/www/html/wp-content/plugins/offers/vendor/htmlburger/carbon-fields/core/Field/Predefined_Options_Field.php(129): strval(Object(WP_Term))
+#1 /var/www/html/wp-content/plugins/offers/vendor/htmlburger/carbon-fields/core/Field/Predefined_Options_Field.php(107): Carbon_Fields\Field\Predefined_Options_Field->parse_options(Array)
+#2 /var/www/html/wp-content/plugins/offers/vendor/htmlburger/carbon-fields/core/Field/Select_Field.php(54): Carbon_Fields\Field\Predefined_Options_Field->get_options_values()
+#3 /var/www/html/wp-content/plugins/offers/vendor/htmlburger/carbon-fields/core/Field/Field.php(1034): Carbon_Fields\Field\Select_Field->get_formatted_value()
+#4 /var/www/html/wp-content/plugins/offers/vendor/htmlburger/carbon-fields/core/Field/Select_Field.php(37): Carbon_Fields\Field\Field->to_json(true)
+#5 /var/www/html/wp-content/plugins/offers/vendor/htmlburger/carbon-fields/core/Container/Container.php(815): Carbon_Fields\Field\Select_Field->to_json(true)
+#6 /var/www/html/wp-content/plugins/offers/vendor/htmlburger/carbon-fields/core/Loader/Loader.php(278): Carbon_Fields\Container\Container->to_json(true)
+#7 /var/www/html/wp-content/plugins/offers/vendor/htmlburger/carbon-fields/core/Loader/Loader.php(222): Carbon_Fields\Loader\Loader->get_json_data()
+#8 /var/www/html/wp-includes/class-wp-hook.php(308): Carbon_Fields\Loader\Loader->enqueue_assets('')
+#9 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#10 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#11 /var/www/html/wp-admin/admin-footer.php(95): do_action('admin_print_foo...')
+#12 /var/www/html/wp-admin/admin.php(297): require_once('/var/www/html/w...')
+#13 {main}
+  thrown in /var/www/html/wp-content/plugins/offers/vendor/htmlburger/carbon-fields/core/Field/Predefined_Options_Field.php on line 129
+
+2023-06-01T12:00:02+00:00 CRITICAL Uncaught Error: Object of class WP_Term could not be converted to string in /var/www/html/wp-content/plugins/offers/vendor/htmlburger/carbon-fields/core/Field/Predefined_Options_Field.php:129
+Stack trace:
+#0 /var/www/html/wp-content/plugins/offers/vendor/htmlburger/carbon-fields/core/Field/Predefined_Options_Field.php(129): strval(Object(WP_Term))
+#1 /var/www/html/wp-content/plugins/offers/vendor/htmlburger/carbon-fields/core/Field/Predefined_Options_Field.php(107): Carbon_Fields\Field\Predefined_Options_Field->parse_options(Array)
+#2 /var/www/html/wp-content/plugins/offers/vendor/htmlburger/carbon-fields/core/Field/Select_Field.php(54): Carbon_Fields\Field\Predefined_Options_Field->get_options_values()
+#3 /var/www/html/wp-content/plugins/offers/vendor/htmlburger/carbon-fields/core/Field/Field.php(1034): Carbon_Fields\Field\Select_Field->get_formatted_value()
+#4 /var/www/html/wp-content/plugins/offers/vendor/htmlburger/carbon-fields/core/Field/Select_Field.php(37): Carbon_Fields\Field\Field->to_json(true)
+#5 /var/www/html/wp-content/plugins/offers/vendor/htmlburger/carbon-fields/core/Container/Container.php(815): Carbon_Fields\Field\Select_Field->to_json(true)
+#6 /var/www/html/wp-content/plugins/offers/vendor/htmlburger/carbon-fields/core/Loader/Loader.php(278): Carbon_Fields\Container\Container->to_json(true)
+#7 /var/www/html/wp-content/plugins/offers/vendor/htmlburger/carbon-fields/core/Loader/Loader.php(222): Carbon_Fields\Loader\Loader->get_json_data()
+#8 /var/www/html/wp-includes/class-wp-hook.php(308): Carbon_Fields\Loader\Loader->enqueue_assets('')
+#9 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#10 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#11 /var/www/html/wp-admin/admin-footer.php(95): do_action('admin_print_foo...')
+#12 /var/www/html/wp-admin/admin.php(297): require_once('/var/www/html/w...')
+#13 {main}
+  thrown in /var/www/html/wp-content/plugins/offers/vendor/htmlburger/carbon-fields/core/Field/Predefined_Options_Field.php on line 129
+
+2023-06-01T12:00:19+00:00 CRITICAL Uncaught Error: Object of class WP_Term could not be converted to string in /var/www/html/wp-content/plugins/offers/vendor/htmlburger/carbon-fields/core/Field/Predefined_Options_Field.php:129
+Stack trace:
+#0 /var/www/html/wp-content/plugins/offers/vendor/htmlburger/carbon-fields/core/Field/Predefined_Options_Field.php(129): strval(Object(WP_Term))
+#1 /var/www/html/wp-content/plugins/offers/vendor/htmlburger/carbon-fields/core/Field/Predefined_Options_Field.php(107): Carbon_Fields\Field\Predefined_Options_Field->parse_options(Array)
+#2 /var/www/html/wp-content/plugins/offers/vendor/htmlburger/carbon-fields/core/Field/Select_Field.php(54): Carbon_Fields\Field\Predefined_Options_Field->get_options_values()
+#3 /var/www/html/wp-content/plugins/offers/vendor/htmlburger/carbon-fields/core/Field/Field.php(1034): Carbon_Fields\Field\Select_Field->get_formatted_value()
+#4 /var/www/html/wp-content/plugins/offers/vendor/htmlburger/carbon-fields/core/Field/Select_Field.php(37): Carbon_Fields\Field\Field->to_json(true)
+#5 /var/www/html/wp-content/plugins/offers/vendor/htmlburger/carbon-fields/core/Container/Container.php(815): Carbon_Fields\Field\Select_Field->to_json(true)
+#6 /var/www/html/wp-content/plugins/offers/vendor/htmlburger/carbon-fields/core/Loader/Loader.php(278): Carbon_Fields\Container\Container->to_json(true)
+#7 /var/www/html/wp-content/plugins/offers/vendor/htmlburger/carbon-fields/core/Loader/Loader.php(222): Carbon_Fields\Loader\Loader->get_json_data()
+#8 /var/www/html/wp-includes/class-wp-hook.php(308): Carbon_Fields\Loader\Loader->enqueue_assets('')
+#9 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#10 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#11 /var/www/html/wp-admin/admin-footer.php(95): do_action('admin_print_foo...')
+#12 /var/www/html/wp-admin/admin.php(297): require_once('/var/www/html/w...')
+#13 {main}
+  thrown in /var/www/html/wp-content/plugins/offers/vendor/htmlburger/carbon-fields/core/Field/Predefined_Options_Field.php on line 129
+
+2023-06-01T12:02:19+00:00 CRITICAL Uncaught Error: Object of class WP_Term could not be converted to string in /var/www/html/wp-content/plugins/offers/vendor/htmlburger/carbon-fields/core/Field/Predefined_Options_Field.php:129
+Stack trace:
+#0 /var/www/html/wp-content/plugins/offers/vendor/htmlburger/carbon-fields/core/Field/Predefined_Options_Field.php(129): strval(Object(WP_Term))
+#1 /var/www/html/wp-content/plugins/offers/vendor/htmlburger/carbon-fields/core/Field/Predefined_Options_Field.php(107): Carbon_Fields\Field\Predefined_Options_Field->parse_options(Array)
+#2 /var/www/html/wp-content/plugins/offers/vendor/htmlburger/carbon-fields/core/Field/Select_Field.php(54): Carbon_Fields\Field\Predefined_Options_Field->get_options_values()
+#3 /var/www/html/wp-content/plugins/offers/vendor/htmlburger/carbon-fields/core/Field/Field.php(1034): Carbon_Fields\Field\Select_Field->get_formatted_value()
+#4 /var/www/html/wp-content/plugins/offers/vendor/htmlburger/carbon-fields/core/Field/Select_Field.php(37): Carbon_Fields\Field\Field->to_json(true)
+#5 /var/www/html/wp-content/plugins/offers/vendor/htmlburger/carbon-fields/core/Container/Container.php(815): Carbon_Fields\Field\Select_Field->to_json(true)
+#6 /var/www/html/wp-content/plugins/offers/vendor/htmlburger/carbon-fields/core/Loader/Loader.php(278): Carbon_Fields\Container\Container->to_json(true)
+#7 /var/www/html/wp-content/plugins/offers/vendor/htmlburger/carbon-fields/core/Loader/Loader.php(222): Carbon_Fields\Loader\Loader->get_json_data()
+#8 /var/www/html/wp-includes/class-wp-hook.php(308): Carbon_Fields\Loader\Loader->enqueue_assets('')
+#9 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#10 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#11 /var/www/html/wp-admin/admin-footer.php(95): do_action('admin_print_foo...')
+#12 /var/www/html/wp-admin/admin.php(297): require_once('/var/www/html/w...')
+#13 {main}
+  thrown in /var/www/html/wp-content/plugins/offers/vendor/htmlburger/carbon-fields/core/Field/Predefined_Options_Field.php on line 129
+
+2023-06-01T12:52:13+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function Offers_Admin::add_offer_cat_option(), 1 passed in /var/www/html/wp-includes/class-wp-hook.php on line 310 and exactly 2 expected in /var/www/html/wp-content/plugins/offers/admin/class-offers-admin.php:177
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(310): Offers_Admin->add_offer_cat_option('_transient_doin...')
+#1 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /var/www/html/wp-includes/option.php(678): do_action('add_option', '_transient_doin...', '1685623933.0655...')
+#4 /var/www/html/wp-includes/option.php(988): add_option('_transient_doin...', '1685623933.0655...', '', 'yes')
+#5 /var/www/html/wp-includes/cron.php(892): set_transient('doing_cron', '1685623933.0655...')
+#6 /var/www/html/wp-includes/cron.php(1002): spawn_cron(1685623933.0655)
+#7 /var/www/html/wp-includes/class-wp-hook.php(308): _wp_cron('')
+#8 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#9 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#10 /var/www/html/wp-settings.php(645): do_action('wp_loaded')
+#11 /var/www/html/wp-config.php(136): require_once('/var/www/html/w...')
+#12 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#13 /var/www/html/wp-admin/admin-ajax.php(22): require_once('/var/www/html/w...')
+#14 {main}
+  thrown in /var/www/html/wp-content/plugins/offers/admin/class-offers-admin.php on line 177
+
+2023-06-01T12:52:13+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function Offers_Admin::add_offer_cat_option(), 1 passed in /var/www/html/wp-includes/class-wp-hook.php on line 310 and exactly 2 expected in /var/www/html/wp-content/plugins/offers/admin/class-offers-admin.php:177
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(310): Offers_Admin->add_offer_cat_option('_transient_doin...')
+#1 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /var/www/html/wp-includes/option.php(678): do_action('add_option', '_transient_doin...', '1685623933.9445...')
+#4 /var/www/html/wp-includes/option.php(988): add_option('_transient_doin...', '1685623933.9445...', '', 'yes')
+#5 /var/www/html/wp-includes/cron.php(892): set_transient('doing_cron', '1685623933.9445...')
+#6 /var/www/html/wp-includes/cron.php(1002): spawn_cron(1685623933.9445)
+#7 /var/www/html/wp-includes/class-wp-hook.php(308): _wp_cron('')
+#8 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#9 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#10 /var/www/html/wp-settings.php(645): do_action('wp_loaded')
+#11 /var/www/html/wp-config.php(136): require_once('/var/www/html/w...')
+#12 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#13 /var/www/html/wp-admin/admin.php(34): require_once('/var/www/html/w...')
+#14 {main}
+  thrown in /var/www/html/wp-content/plugins/offers/admin/class-offers-admin.php on line 177
+
+2023-06-01T12:52:14+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function Offers_Admin::add_offer_cat_option(), 1 passed in /var/www/html/wp-includes/class-wp-hook.php on line 310 and exactly 2 expected in /var/www/html/wp-content/plugins/offers/admin/class-offers-admin.php:177
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(310): Offers_Admin->add_offer_cat_option('_transient_doin...')
+#1 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /var/www/html/wp-includes/option.php(678): do_action('add_option', '_transient_doin...', '1685623934.2948...')
+#4 /var/www/html/wp-includes/option.php(988): add_option('_transient_doin...', '1685623934.2948...', '', 'yes')
+#5 /var/www/html/wp-includes/cron.php(892): set_transient('doing_cron', '1685623934.2948...')
+#6 /var/www/html/wp-includes/cron.php(1002): spawn_cron(1685623934.2948)
+#7 /var/www/html/wp-includes/class-wp-hook.php(308): _wp_cron('')
+#8 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#9 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#10 /var/www/html/wp-settings.php(645): do_action('wp_loaded')
+#11 /var/www/html/wp-config.php(136): require_once('/var/www/html/w...')
+#12 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#13 /var/www/html/wp-blog-header.php(13): require_once('/var/www/html/w...')
+#14 /var/www/html/index.php(17): require('/var/www/html/w...')
+#15 {main}
+  thrown in /var/www/html/wp-content/plugins/offers/admin/class-offers-admin.php on line 177
+
+2023-06-01T13:37:42+00:00 CRITICAL Uncaught Error: Call to undefined function rror_log() in /var/www/html/wp-content/plugins/offers/public/class-offers-public.php:106
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(310): Offers_Public->custom_add_to_cart('c51ce410c124a10...')
+#1 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-cart.php(1279): do_action('woocommerce_add...', 'c51ce410c124a10...', 13, 1, 0, Array, Array)
+#4 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-ajax.php(441): WC_Cart->add_to_cart(13, 1, 0, Array)
+#5 /var/www/html/wp-includes/class-wp-hook.php(308): WC_AJAX::add_to_cart('')
+#6 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#7 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#8 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-ajax.php(96): do_action('wc_ajax_add_to_...')
+#9 /var/www/html/wp-includes/class-wp-hook.php(308): WC_AJAX::do_wc_ajax('')
+#10 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters(false, Array)
+#11 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#12 /var/www/html/wp-includes/template-loader.php(13): do_action('template_redire...')
+#13 /var/www/html/wp-blog-header.php(19): require_once('/var/www/html/w...')
+#14 /var/www/html/index.php(17): require('/var/www/html/w...')
+#15 {main}
+  thrown in /var/www/html/wp-content/plugins/offers/public/class-offers-public.php on line 106
+
+2023-06-01T13:37:55+00:00 CRITICAL Uncaught Error: Call to undefined function rror_log() in /var/www/html/wp-content/plugins/offers/public/class-offers-public.php:106
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(310): Offers_Public->custom_add_to_cart('70efdf2ec9b0860...')
+#1 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-cart.php(1279): do_action('woocommerce_add...', '70efdf2ec9b0860...', 17, 1, 0, Array, Array)
+#4 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-ajax.php(441): WC_Cart->add_to_cart(17, 1, 0, Array)
+#5 /var/www/html/wp-includes/class-wp-hook.php(308): WC_AJAX::add_to_cart('')
+#6 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#7 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#8 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-ajax.php(96): do_action('wc_ajax_add_to_...')
+#9 /var/www/html/wp-includes/class-wp-hook.php(308): WC_AJAX::do_wc_ajax('')
+#10 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters(false, Array)
+#11 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#12 /var/www/html/wp-includes/template-loader.php(13): do_action('template_redire...')
+#13 /var/www/html/wp-blog-header.php(19): require_once('/var/www/html/w...')
+#14 /var/www/html/index.php(17): require('/var/www/html/w...')
+#15 {main}
+  thrown in /var/www/html/wp-content/plugins/offers/public/class-offers-public.php on line 106
+
+2023-06-01T13:58:10+00:00 CRITICAL Uncaught Error: Call to undefined method WP_Post::get_attribute() in /var/www/html/wp-content/plugins/offers/admin/class-offers-admin.php:142
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(308): Offers_Admin->crb_attach_offers_options('')
+#1 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /var/www/html/wp-content/plugins/offers/vendor/htmlburger/carbon-fields/core/Loader/Loader.php(113): do_action('carbon_fields_r...')
+#4 /var/www/html/wp-includes/class-wp-hook.php(308): Carbon_Fields\Loader\Loader->trigger_fields_register('')
+#5 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#6 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#7 /var/www/html/wp-settings.php(623): do_action('init')
+#8 /var/www/html/wp-config.php(136): require_once('/var/www/html/w...')
+#9 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#10 /var/www/html/wp-admin/admin.php(34): require_once('/var/www/html/w...')
+#11 {main}
+  thrown in /var/www/html/wp-content/plugins/offers/admin/class-offers-admin.php on line 142
+
+2023-06-01T13:58:10+00:00 CRITICAL Uncaught Error: Call to undefined method WP_Post::get_attribute() in /var/www/html/wp-content/plugins/offers/admin/class-offers-admin.php:142
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(308): Offers_Admin->crb_attach_offers_options('')
+#1 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /var/www/html/wp-content/plugins/offers/vendor/htmlburger/carbon-fields/core/Loader/Loader.php(113): do_action('carbon_fields_r...')
+#4 /var/www/html/wp-includes/class-wp-hook.php(308): Carbon_Fields\Loader\Loader->trigger_fields_register('')
+#5 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#6 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#7 /var/www/html/wp-settings.php(623): do_action('init')
+#8 /var/www/html/wp-config.php(136): require_once('/var/www/html/w...')
+#9 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#10 /var/www/html/wp-blog-header.php(13): require_once('/var/www/html/w...')
+#11 /var/www/html/index.php(17): require('/var/www/html/w...')
+#12 {main}
+  thrown in /var/www/html/wp-content/plugins/offers/admin/class-offers-admin.php on line 142
+
+2023-06-01T14:02:18+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function woocommerce_get_product_terms(), 1 passed in /var/www/html/wp-content/plugins/offers/admin/class-offers-admin.php on line 143 and at least 2 expected in /var/www/html/wp-content/plugins/woocommerce/includes/wc-deprecated-functions.php:818
+Stack trace:
+#0 /var/www/html/wp-content/plugins/offers/admin/class-offers-admin.php(143): woocommerce_get_product_terms(18)
+#1 /var/www/html/wp-includes/class-wp-hook.php(308): Offers_Admin->crb_attach_offers_options('')
+#2 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#3 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#4 /var/www/html/wp-content/plugins/offers/vendor/htmlburger/carbon-fields/core/Loader/Loader.php(113): do_action('carbon_fields_r...')
+#5 /var/www/html/wp-includes/class-wp-hook.php(308): Carbon_Fields\Loader\Loader->trigger_fields_register('')
+#6 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#7 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#8 /var/www/html/wp-settings.php(623): do_action('init')
+#9 /var/www/html/wp-config.php(136): require_once('/var/www/html/w...')
+#10 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#11 /var/www/html/wp-admin/admin-ajax.php(22): require_once('/var/www/html/w...')
+#12 {main}
+  thrown in /var/www/html/wp-content/plugins/woocommerce/includes/wc-deprecated-functions.php on line 818
+
+2023-06-01T14:02:19+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function woocommerce_get_product_terms(), 1 passed in /var/www/html/wp-content/plugins/offers/admin/class-offers-admin.php on line 143 and at least 2 expected in /var/www/html/wp-content/plugins/woocommerce/includes/wc-deprecated-functions.php:818
+Stack trace:
+#0 /var/www/html/wp-content/plugins/offers/admin/class-offers-admin.php(143): woocommerce_get_product_terms(18)
+#1 /var/www/html/wp-includes/class-wp-hook.php(308): Offers_Admin->crb_attach_offers_options('')
+#2 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#3 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#4 /var/www/html/wp-content/plugins/offers/vendor/htmlburger/carbon-fields/core/Loader/Loader.php(113): do_action('carbon_fields_r...')
+#5 /var/www/html/wp-includes/class-wp-hook.php(308): Carbon_Fields\Loader\Loader->trigger_fields_register('')
+#6 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#7 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#8 /var/www/html/wp-settings.php(623): do_action('init')
+#9 /var/www/html/wp-config.php(136): require_once('/var/www/html/w...')
+#10 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#11 /var/www/html/wp-admin/admin.php(34): require_once('/var/www/html/w...')
+#12 {main}
+  thrown in /var/www/html/wp-content/plugins/woocommerce/includes/wc-deprecated-functions.php on line 818
+
+2023-06-01T14:02:20+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function woocommerce_get_product_terms(), 1 passed in /var/www/html/wp-content/plugins/offers/admin/class-offers-admin.php on line 143 and at least 2 expected in /var/www/html/wp-content/plugins/woocommerce/includes/wc-deprecated-functions.php:818
+Stack trace:
+#0 /var/www/html/wp-content/plugins/offers/admin/class-offers-admin.php(143): woocommerce_get_product_terms(18)
+#1 /var/www/html/wp-includes/class-wp-hook.php(308): Offers_Admin->crb_attach_offers_options('')
+#2 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#3 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#4 /var/www/html/wp-content/plugins/offers/vendor/htmlburger/carbon-fields/core/Loader/Loader.php(113): do_action('carbon_fields_r...')
+#5 /var/www/html/wp-includes/class-wp-hook.php(308): Carbon_Fields\Loader\Loader->trigger_fields_register('')
+#6 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#7 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#8 /var/www/html/wp-settings.php(623): do_action('init')
+#9 /var/www/html/wp-config.php(136): require_once('/var/www/html/w...')
+#10 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#11 /var/www/html/wp-blog-header.php(13): require_once('/var/www/html/w...')
+#12 /var/www/html/index.php(17): require('/var/www/html/w...')
+#13 {main}
+  thrown in /var/www/html/wp-content/plugins/woocommerce/includes/wc-deprecated-functions.php on line 818
+
+2023-06-01T14:03:27+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function wc_get_product_terms(), 1 passed in /var/www/html/wp-content/plugins/offers/admin/class-offers-admin.php on line 143 and at least 2 expected in /var/www/html/wp-content/plugins/woocommerce/includes/wc-term-functions.php:176
+Stack trace:
+#0 /var/www/html/wp-content/plugins/offers/admin/class-offers-admin.php(143): wc_get_product_terms(18)
+#1 /var/www/html/wp-includes/class-wp-hook.php(308): Offers_Admin->crb_attach_offers_options('')
+#2 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#3 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#4 /var/www/html/wp-content/plugins/offers/vendor/htmlburger/carbon-fields/core/Loader/Loader.php(113): do_action('carbon_fields_r...')
+#5 /var/www/html/wp-includes/class-wp-hook.php(308): Carbon_Fields\Loader\Loader->trigger_fields_register('')
+#6 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#7 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#8 /var/www/html/wp-settings.php(623): do_action('init')
+#9 /var/www/html/wp-config.php(136): require_once('/var/www/html/w...')
+#10 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#11 /var/www/html/wp-admin/admin.php(34): require_once('/var/www/html/w...')
+#12 {main}
+  thrown in /var/www/html/wp-content/plugins/woocommerce/includes/wc-term-functions.php on line 176
+
+2023-06-01T14:03:27+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function wc_get_product_terms(), 1 passed in /var/www/html/wp-content/plugins/offers/admin/class-offers-admin.php on line 143 and at least 2 expected in /var/www/html/wp-content/plugins/woocommerce/includes/wc-term-functions.php:176
+Stack trace:
+#0 /var/www/html/wp-content/plugins/offers/admin/class-offers-admin.php(143): wc_get_product_terms(18)
+#1 /var/www/html/wp-includes/class-wp-hook.php(308): Offers_Admin->crb_attach_offers_options('')
+#2 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#3 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#4 /var/www/html/wp-content/plugins/offers/vendor/htmlburger/carbon-fields/core/Loader/Loader.php(113): do_action('carbon_fields_r...')
+#5 /var/www/html/wp-includes/class-wp-hook.php(308): Carbon_Fields\Loader\Loader->trigger_fields_register('')
+#6 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#7 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#8 /var/www/html/wp-settings.php(623): do_action('init')
+#9 /var/www/html/wp-config.php(136): require_once('/var/www/html/w...')
+#10 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#11 /var/www/html/wp-blog-header.php(13): require_once('/var/www/html/w...')
+#12 /var/www/html/index.php(17): require('/var/www/html/w...')
+#13 {main}
+  thrown in /var/www/html/wp-content/plugins/woocommerce/includes/wc-term-functions.php on line 176
+
+2023-06-01T14:04:41+00:00 CRITICAL Uncaught Error: Call to undefined method WP_Post::get_attributes() in /var/www/html/wp-content/plugins/offers/admin/class-offers-admin.php:143
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(308): Offers_Admin->crb_attach_offers_options('')
+#1 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /var/www/html/wp-content/plugins/offers/vendor/htmlburger/carbon-fields/core/Loader/Loader.php(113): do_action('carbon_fields_r...')
+#4 /var/www/html/wp-includes/class-wp-hook.php(308): Carbon_Fields\Loader\Loader->trigger_fields_register('')
+#5 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#6 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#7 /var/www/html/wp-settings.php(623): do_action('init')
+#8 /var/www/html/wp-config.php(136): require_once('/var/www/html/w...')
+#9 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#10 /var/www/html/wp-admin/admin.php(34): require_once('/var/www/html/w...')
+#11 {main}
+  thrown in /var/www/html/wp-content/plugins/offers/admin/class-offers-admin.php on line 143
+
+2023-06-01T14:04:41+00:00 CRITICAL Uncaught Error: Call to undefined method WP_Post::get_attributes() in /var/www/html/wp-content/plugins/offers/admin/class-offers-admin.php:143
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(308): Offers_Admin->crb_attach_offers_options('')
+#1 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /var/www/html/wp-content/plugins/offers/vendor/htmlburger/carbon-fields/core/Loader/Loader.php(113): do_action('carbon_fields_r...')
+#4 /var/www/html/wp-includes/class-wp-hook.php(308): Carbon_Fields\Loader\Loader->trigger_fields_register('')
+#5 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#6 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#7 /var/www/html/wp-settings.php(623): do_action('init')
+#8 /var/www/html/wp-config.php(136): require_once('/var/www/html/w...')
+#9 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#10 /var/www/html/wp-blog-header.php(13): require_once('/var/www/html/w...')
+#11 /var/www/html/index.php(17): require('/var/www/html/w...')
+#12 {main}
+  thrown in /var/www/html/wp-content/plugins/offers/admin/class-offers-admin.php on line 143
+
+2023-06-01T14:09:16+00:00 CRITICAL Uncaught TypeError: array_key_exists(): Argument #2 ($array) must be of type array, null given in /var/www/html/wp-content/plugins/offers/admin/class-offers-admin.php:144
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(308): Offers_Admin->crb_attach_offers_options('')
+#1 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /var/www/html/wp-content/plugins/offers/vendor/htmlburger/carbon-fields/core/Loader/Loader.php(113): do_action('carbon_fields_r...')
+#4 /var/www/html/wp-includes/class-wp-hook.php(308): Carbon_Fields\Loader\Loader->trigger_fields_register('')
+#5 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#6 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#7 /var/www/html/wp-settings.php(623): do_action('init')
+#8 /var/www/html/wp-config.php(136): require_once('/var/www/html/w...')
+#9 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#10 /var/www/html/wp-admin/admin.php(34): require_once('/var/www/html/w...')
+#11 {main}
+  thrown in /var/www/html/wp-content/plugins/offers/admin/class-offers-admin.php on line 144
+
+2023-06-01T14:09:16+00:00 CRITICAL Uncaught TypeError: array_key_exists(): Argument #2 ($array) must be of type array, null given in /var/www/html/wp-content/plugins/offers/admin/class-offers-admin.php:144
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(308): Offers_Admin->crb_attach_offers_options('')
+#1 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /var/www/html/wp-content/plugins/offers/vendor/htmlburger/carbon-fields/core/Loader/Loader.php(113): do_action('carbon_fields_r...')
+#4 /var/www/html/wp-includes/class-wp-hook.php(308): Carbon_Fields\Loader\Loader->trigger_fields_register('')
+#5 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#6 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#7 /var/www/html/wp-settings.php(623): do_action('init')
+#8 /var/www/html/wp-config.php(136): require_once('/var/www/html/w...')
+#9 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#10 /var/www/html/wp-blog-header.php(13): require_once('/var/www/html/w...')
+#11 /var/www/html/index.php(17): require('/var/www/html/w...')
+#12 {main}
+  thrown in /var/www/html/wp-content/plugins/offers/admin/class-offers-admin.php on line 144
+
+2023-06-01T14:59:03+00:00 CRITICAL Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, class Offers_Admin does not have a method "add_offer_cat_option" in /var/www/html/wp-includes/class-wp-hook.php:310
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#1 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#2 /var/www/html/wp-includes/option.php(678): do_action('add_option', '_transient_doin...', '1685631543.6157...')
+#3 /var/www/html/wp-includes/option.php(988): add_option('_transient_doin...', '1685631543.6157...', '', 'yes')
+#4 /var/www/html/wp-includes/cron.php(892): set_transient('doing_cron', '1685631543.6157...')
+#5 /var/www/html/wp-includes/cron.php(1002): spawn_cron(1685631543.6158)
+#6 /var/www/html/wp-includes/class-wp-hook.php(308): _wp_cron('')
+#7 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#8 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#9 /var/www/html/wp-settings.php(645): do_action('wp_loaded')
+#10 /var/www/html/wp-config.php(136): require_once('/var/www/html/w...')
+#11 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#12 /var/www/html/wp-admin/admin-ajax.php(22): require_once('/var/www/html/w...')
+#13 {main}
+  thrown in /var/www/html/wp-includes/class-wp-hook.php on line 310
+
+2023-06-01T15:42:59+00:00 CRITICAL Allowed memory size of 536870912 bytes exhausted (tried to allocate 20480 bytes) in /var/www/html/wp-includes/class-wpdb.php on line 1538
+
+2023-06-01T15:45:57+00:00 CRITICAL Uncaught Error: Call to a member function add_to_cart() on array in /var/www/html/wp-content/plugins/offers/public/class-offers-public.php:137
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(310): Offers_Public->custom_add_to_cart('c51ce410c124a10...')
+#1 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-cart.php(1279): do_action('woocommerce_add...', 'c51ce410c124a10...', 13, 1, 0, Array, Array)
+#4 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-ajax.php(441): WC_Cart->add_to_cart(13, 1, 0, Array)
+#5 /var/www/html/wp-includes/class-wp-hook.php(308): WC_AJAX::add_to_cart('')
+#6 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#7 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#8 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-ajax.php(96): do_action('wc_ajax_add_to_...')
+#9 /var/www/html/wp-includes/class-wp-hook.php(308): WC_AJAX::do_wc_ajax('')
+#10 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters(false, Array)
+#11 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#12 /var/www/html/wp-includes/template-loader.php(13): do_action('template_redire...')
+#13 /var/www/html/wp-blog-header.php(19): require_once('/var/www/html/w...')
+#14 /var/www/html/index.php(17): require('/var/www/html/w...')
+#15 {main}
+  thrown in /var/www/html/wp-content/plugins/offers/public/class-offers-public.php on line 137
+
+2023-06-01T15:52:57+00:00 CRITICAL Allowed memory size of 536870912 bytes exhausted (tried to allocate 20480 bytes) in /var/www/html/wp-includes/class-wpdb.php on line 2508
+
+2023-06-01T16:00:12+00:00 CRITICAL Allowed memory size of 536870912 bytes exhausted (tried to allocate 20480 bytes) in /var/www/html/wp-includes/class-wpdb.php on line 2508
+
+2023-06-01T16:00:35+00:00 CRITICAL Allowed memory size of 536870912 bytes exhausted (tried to allocate 20480 bytes) in /var/www/html/wp-includes/class-wpdb.php on line 2508
+
+2023-06-01T16:12:17+00:00 CRITICAL Allowed memory size of 536870912 bytes exhausted (tried to allocate 20480 bytes) in /var/www/html/wp-content/plugins/woocommerce/includes/data-stores/class-wc-product-data-store-cpt.php on line 368
+
+2023-06-01T16:13:39+00:00 CRITICAL Allowed memory size of 536870912 bytes exhausted (tried to allocate 20480 bytes) in /var/www/html/wp-content/plugins/woocommerce/includes/data-stores/class-wc-product-data-store-cpt.php on line 368
+
+2023-06-01T16:22:16+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function Offers_Public::custom_add_to_cart(), 1 passed in /var/www/html/wp-includes/class-wp-hook.php on line 308 and exactly 2 expected in /var/www/html/wp-content/plugins/offers/public/class-offers-public.php:111
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(308): Offers_Public->custom_add_to_cart(Array)
+#1 /var/www/html/wp-includes/plugin.php(205): WP_Hook->apply_filters(Array, Array)
+#2 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-ajax.php(214): apply_filters('woocommerce_add...', Array)
+#3 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-ajax.php(449): WC_AJAX::get_refreshed_fragments()
+#4 /var/www/html/wp-includes/class-wp-hook.php(308): WC_AJAX::add_to_cart('')
+#5 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#6 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#7 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-ajax.php(96): do_action('wc_ajax_add_to_...')
+#8 /var/www/html/wp-includes/class-wp-hook.php(308): WC_AJAX::do_wc_ajax('')
+#9 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters(false, Array)
+#10 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#11 /var/www/html/wp-includes/template-loader.php(13): do_action('template_redire...')
+#12 /var/www/html/wp-blog-header.php(19): require_once('/var/www/html/w...')
+#13 /var/www/html/index.php(17): require('/var/www/html/w...')
+#14 {main}
+  thrown in /var/www/html/wp-content/plugins/offers/public/class-offers-public.php on line 111
+
+2023-06-01T16:22:28+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function Offers_Public::custom_add_to_cart(), 1 passed in /var/www/html/wp-includes/class-wp-hook.php on line 308 and exactly 2 expected in /var/www/html/wp-content/plugins/offers/public/class-offers-public.php:111
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(308): Offers_Public->custom_add_to_cart(Array)
+#1 /var/www/html/wp-includes/plugin.php(205): WP_Hook->apply_filters(Array, Array)
+#2 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-ajax.php(214): apply_filters('woocommerce_add...', Array)
+#3 /var/www/html/wp-includes/class-wp-hook.php(308): WC_AJAX::get_refreshed_fragments('')
+#4 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#5 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#6 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-ajax.php(96): do_action('wc_ajax_get_ref...')
+#7 /var/www/html/wp-includes/class-wp-hook.php(308): WC_AJAX::do_wc_ajax('')
+#8 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters(false, Array)
+#9 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#10 /var/www/html/wp-includes/template-loader.php(13): do_action('template_redire...')
+#11 /var/www/html/wp-blog-header.php(19): require_once('/var/www/html/w...')
+#12 /var/www/html/index.php(17): require('/var/www/html/w...')
+#13 {main}
+  thrown in /var/www/html/wp-content/plugins/offers/public/class-offers-public.php on line 111
+
+2023-06-01T16:22:28+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function Offers_Public::custom_add_to_cart(), 1 passed in /var/www/html/wp-includes/class-wp-hook.php on line 308 and exactly 2 expected in /var/www/html/wp-content/plugins/offers/public/class-offers-public.php:111
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(308): Offers_Public->custom_add_to_cart(Array)
+#1 /var/www/html/wp-includes/plugin.php(205): WP_Hook->apply_filters(Array, Array)
+#2 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-ajax.php(214): apply_filters('woocommerce_add...', Array)
+#3 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-ajax.php(449): WC_AJAX::get_refreshed_fragments()
+#4 /var/www/html/wp-includes/class-wp-hook.php(308): WC_AJAX::add_to_cart('')
+#5 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#6 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#7 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-ajax.php(96): do_action('wc_ajax_add_to_...')
+#8 /var/www/html/wp-includes/class-wp-hook.php(308): WC_AJAX::do_wc_ajax('')
+#9 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters(false, Array)
+#10 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#11 /var/www/html/wp-includes/template-loader.php(13): do_action('template_redire...')
+#12 /var/www/html/wp-blog-header.php(19): require_once('/var/www/html/w...')
+#13 /var/www/html/index.php(17): require('/var/www/html/w...')
+#14 {main}
+  thrown in /var/www/html/wp-content/plugins/offers/public/class-offers-public.php on line 111
+
+2023-06-01T16:22:58+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function Offers_Public::custom_add_to_cart(), 1 passed in /var/www/html/wp-includes/class-wp-hook.php on line 310 and exactly 2 expected in /var/www/html/wp-content/plugins/offers/public/class-offers-public.php:111
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(310): Offers_Public->custom_add_to_cart('c51ce410c124a10...')
+#1 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-cart.php(1279): do_action('woocommerce_add...', 'c51ce410c124a10...', 13, 1, 0, Array, Array)
+#4 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-ajax.php(441): WC_Cart->add_to_cart(13, 1, 0, Array)
+#5 /var/www/html/wp-includes/class-wp-hook.php(308): WC_AJAX::add_to_cart('')
+#6 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#7 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#8 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-ajax.php(96): do_action('wc_ajax_add_to_...')
+#9 /var/www/html/wp-includes/class-wp-hook.php(308): WC_AJAX::do_wc_ajax('')
+#10 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters(false, Array)
+#11 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#12 /var/www/html/wp-includes/template-loader.php(13): do_action('template_redire...')
+#13 /var/www/html/wp-blog-header.php(19): require_once('/var/www/html/w...')
+#14 /var/www/html/index.php(17): require('/var/www/html/w...')
+#15 {main}
+  thrown in /var/www/html/wp-content/plugins/offers/public/class-offers-public.php on line 111
+
+2023-06-01T16:23:05+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function Offers_Public::custom_add_to_cart(), 1 passed in /var/www/html/wp-includes/class-wp-hook.php on line 310 and exactly 2 expected in /var/www/html/wp-content/plugins/offers/public/class-offers-public.php:111
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(310): Offers_Public->custom_add_to_cart('c51ce410c124a10...')
+#1 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-cart.php(1279): do_action('woocommerce_add...', 'c51ce410c124a10...', 13, 1, 0, Array, Array)
+#4 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-ajax.php(441): WC_Cart->add_to_cart(13, 1, 0, Array)
+#5 /var/www/html/wp-includes/class-wp-hook.php(308): WC_AJAX::add_to_cart('')
+#6 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#7 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#8 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-ajax.php(96): do_action('wc_ajax_add_to_...')
+#9 /var/www/html/wp-includes/class-wp-hook.php(308): WC_AJAX::do_wc_ajax('')
+#10 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters(false, Array)
+#11 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#12 /var/www/html/wp-includes/template-loader.php(13): do_action('template_redire...')
+#13 /var/www/html/wp-blog-header.php(19): require_once('/var/www/html/w...')
+#14 /var/www/html/index.php(17): require('/var/www/html/w...')
+#15 {main}
+  thrown in /var/www/html/wp-content/plugins/offers/public/class-offers-public.php on line 111
+
+2023-06-01T16:23:20+00:00 CRITICAL Uncaught Error: Cannot use a scalar value as an array in /var/www/html/wp-content/themes/store/framework/woocommerce.php:145
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(310): store_header_add_to_cart_fragment(18)
+#1 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters(18, Array)
+#2 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /var/www/html/wp-content/plugins/offers/public/class-offers-public.php(139): do_action('woocommerce_add...', 18, 1)
+#4 /var/www/html/wp-includes/class-wp-hook.php(310): Offers_Public->custom_add_to_cart('c51ce410c124a10...')
+#5 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#6 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#7 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-cart.php(1279): do_action('woocommerce_add...', 'c51ce410c124a10...', 13, 1, 0, Array, Array)
+#8 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-ajax.php(441): WC_Cart->add_to_cart(13, 1, 0, Array)
+#9 /var/www/html/wp-includes/class-wp-hook.php(308): WC_AJAX::add_to_cart('')
+#10 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#11 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#12 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-ajax.php(96): do_action('wc_ajax_add_to_...')
+#13 /var/www/html/wp-includes/class-wp-hook.php(308): WC_AJAX::do_wc_ajax('')
+#14 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters(false, Array)
+#15 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#16 /var/www/html/wp-includes/template-loader.php(13): do_action('template_redire...')
+#17 /var/www/html/wp-blog-header.php(19): require_once('/var/www/html/w...')
+#18 /var/www/html/index.php(17): require('/var/www/html/w...')
+#19 {main}
+  thrown in /var/www/html/wp-content/themes/store/framework/woocommerce.php on line 145
+
+2023-06-01T16:23:40+00:00 CRITICAL Allowed memory size of 536870912 bytes exhausted (tried to allocate 4096 bytes) in /var/www/html/wp-includes/class-wpdb.php on line 2495
+
+2023-06-01T16:23:52+00:00 CRITICAL Allowed memory size of 536870912 bytes exhausted (tried to allocate 4096 bytes) in /var/www/html/wp-includes/class-wp-term-query.php on line 1162
+
+2023-06-01T16:26:05+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_hash() on array in /var/www/html/wp-content/plugins/offers/public/class-offers-public.php:136
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(310): Offers_Public->custom_add_to_cart('70efdf2ec9b0860...')
+#1 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-cart.php(1279): do_action('woocommerce_add...', '70efdf2ec9b0860...', 17, 1, 0, Array, Array)
+#4 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-ajax.php(441): WC_Cart->add_to_cart(17, 1, 0, Array)
+#5 /var/www/html/wp-includes/class-wp-hook.php(308): WC_AJAX::add_to_cart('')
+#6 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#7 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#8 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-ajax.php(96): do_action('wc_ajax_add_to_...')
+#9 /var/www/html/wp-includes/class-wp-hook.php(308): WC_AJAX::do_wc_ajax('')
+#10 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters(false, Array)
+#11 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#12 /var/www/html/wp-includes/template-loader.php(13): do_action('template_redire...')
+#13 /var/www/html/wp-blog-header.php(19): require_once('/var/www/html/w...')
+#14 /var/www/html/index.php(17): require('/var/www/html/w...')
+#15 {main}
+  thrown in /var/www/html/wp-content/plugins/offers/public/class-offers-public.php on line 136
+
+2023-06-01T16:28:41+00:00 CRITICAL Allowed memory size of 536870912 bytes exhausted (tried to allocate 4096 bytes) in /var/www/html/wp-includes/class-wp-term-query.php on line 1162
+
+2023-06-01T17:09:30+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function Offers_Public::woocommerce_add_cart_item_filter(), 2 passed in /var/www/html/wp-includes/class-wp-hook.php on line 310 and exactly 6 expected in /var/www/html/wp-content/plugins/offers/public/class-offers-public.php:111
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(310): Offers_Public->woocommerce_add_cart_item_filter('c51ce410c124a10...', 13)
+#1 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-cart.php(1279): do_action('woocommerce_add...', 'c51ce410c124a10...', 13, 1, 0, Array, Array)
+#4 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-ajax.php(441): WC_Cart->add_to_cart(13, 1, 0, Array)
+#5 /var/www/html/wp-includes/class-wp-hook.php(308): WC_AJAX::add_to_cart('')
+#6 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#7 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#8 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-ajax.php(96): do_action('wc_ajax_add_to_...')
+#9 /var/www/html/wp-includes/class-wp-hook.php(308): WC_AJAX::do_wc_ajax('')
+#10 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters(false, Array)
+#11 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#12 /var/www/html/wp-includes/template-loader.php(13): do_action('template_redire...')
+#13 /var/www/html/wp-blog-header.php(19): require_once('/var/www/html/w...')
+#14 /var/www/html/index.php(17): require('/var/www/html/w...')
+#15 {main}
+  thrown in /var/www/html/wp-content/plugins/offers/public/class-offers-public.php on line 111
+
+2023-06-01T17:13:40+00:00 CRITICAL Uncaught Error: Cannot use object of type WC_Cart as array in /var/www/html/wp-content/plugins/offers/public/class-offers-public.php:116
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(310): Offers_Public->woocommerce_add_cart_item_filter('70efdf2ec9b0860...', 17)
+#1 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-cart.php(1279): do_action('woocommerce_add...', '70efdf2ec9b0860...', 17, 1, 0, Array, Array)
+#4 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-ajax.php(441): WC_Cart->add_to_cart(17, 1, 0, Array)
+#5 /var/www/html/wp-includes/class-wp-hook.php(308): WC_AJAX::add_to_cart('')
+#6 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#7 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#8 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-ajax.php(96): do_action('wc_ajax_add_to_...')
+#9 /var/www/html/wp-includes/class-wp-hook.php(308): WC_AJAX::do_wc_ajax('')
+#10 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters(false, Array)
+#11 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#12 /var/www/html/wp-includes/template-loader.php(13): do_action('template_redire...')
+#13 /var/www/html/wp-blog-header.php(19): require_once('/var/www/html/w...')
+#14 /var/www/html/index.php(17): require('/var/www/html/w...')
+#15 {main}
+  thrown in /var/www/html/wp-content/plugins/offers/public/class-offers-public.php on line 116
+
+2023-06-01T17:17:57+00:00 CRITICAL Allowed memory size of 536870912 bytes exhausted (tried to allocate 20480 bytes) in /var/www/html/wp-content/plugins/woocommerce/includes/data-stores/class-wc-product-data-store-cpt.php on line 368
+
+2023-06-01T17:19:50+00:00 CRITICAL Uncaught Error: Call to a member function add_to_cart() on array in /var/www/html/wp-content/plugins/offers/public/class-offers-public.php:119
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(310): Offers_Public->woocommerce_add_cart_item_filter('c51ce410c124a10...', 13)
+#1 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-cart.php(1279): do_action('woocommerce_add...', 'c51ce410c124a10...', 13, 1, 0, Array, Array)
+#4 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-ajax.php(441): WC_Cart->add_to_cart(13, 1, 0, Array)
+#5 /var/www/html/wp-includes/class-wp-hook.php(308): WC_AJAX::add_to_cart('')
+#6 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#7 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#8 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-ajax.php(96): do_action('wc_ajax_add_to_...')
+#9 /var/www/html/wp-includes/class-wp-hook.php(308): WC_AJAX::do_wc_ajax('')
+#10 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters(false, Array)
+#11 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#12 /var/www/html/wp-includes/template-loader.php(13): do_action('template_redire...')
+#13 /var/www/html/wp-blog-header.php(19): require_once('/var/www/html/w...')
+#14 /var/www/html/index.php(17): require('/var/www/html/w...')
+#15 {main}
+  thrown in /var/www/html/wp-content/plugins/offers/public/class-offers-public.php on line 119
+
+2023-06-01T17:41:17+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function apply_filters(), 1 passed in /var/www/html/wp-content/plugins/offers/public/class-offers-public.php on line 117 and exactly 2 expected in /var/www/html/wp-includes/plugin.php:173
+Stack trace:
+#0 /var/www/html/wp-content/plugins/offers/public/class-offers-public.php(117): apply_filters('woocommerce_add...')
+#1 /var/www/html/wp-includes/class-wp-hook.php(310): Offers_Public->woocommerce_add_cart_item_filter('70efdf2ec9b0860...', 17)
+#2 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#3 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#4 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-cart.php(1279): do_action('woocommerce_add...', '70efdf2ec9b0860...', 17, 1, 0, Array, Array)
+#5 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-form-handler.php(824): WC_Cart->add_to_cart(17, 1)
+#6 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-form-handler.php(796): WC_Form_Handler::add_to_cart_handler_simple(17)
+#7 /var/www/html/wp-includes/class-wp-hook.php(308): WC_Form_Handler::add_to_cart_action('')
+#8 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#9 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#10 /var/www/html/wp-settings.php(645): do_action('wp_loaded')
+#11 /var/www/html/wp-config.php(136): require_once('/var/www/html/w...')
+#12 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#13 /var/www/html/wp-blog-header.php(13): require_once('/var/www/html/w...')
+#14 /var/www/html/index.php(17): require('/var/www/html/w...')
+#15 {main}
+  thrown in /var/www/html/wp-includes/plugin.php on line 173
+
+2023-06-01T19:56:56+00:00 CRITICAL Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, class Offers_Public does not have a method "woocommerce_remove_cart_item_data" in /var/www/html/wp-includes/class-wp-hook.php:308
+Stack trace:
+#0 /var/www/html/wp-includes/plugin.php(205): WP_Hook->apply_filters(true, Array)
+#1 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-form-handler.php(696): apply_filters('woocommerce_upd...', true)
+#2 /var/www/html/wp-includes/class-wp-hook.php(308): WC_Form_Handler::update_cart_action('')
+#3 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#4 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#5 /var/www/html/wp-settings.php(645): do_action('wp_loaded')
+#6 /var/www/html/wp-config.php(136): require_once('/var/www/html/w...')
+#7 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#8 /var/www/html/wp-blog-header.php(13): require_once('/var/www/html/w...')
+#9 /var/www/html/index.php(17): require('/var/www/html/w...')
+#10 {main}
+  thrown in /var/www/html/wp-includes/class-wp-hook.php on line 308
+
+2023-06-01T19:57:19+00:00 CRITICAL Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, class Offers_Public does not have a method "woocommerce_remove_cart_item_data" in /var/www/html/wp-includes/class-wp-hook.php:308
+Stack trace:
+#0 /var/www/html/wp-includes/plugin.php(205): WP_Hook->apply_filters(true, Array)
+#1 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-form-handler.php(696): apply_filters('woocommerce_upd...', true)
+#2 /var/www/html/wp-includes/class-wp-hook.php(308): WC_Form_Handler::update_cart_action('')
+#3 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#4 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#5 /var/www/html/wp-settings.php(645): do_action('wp_loaded')
+#6 /var/www/html/wp-config.php(136): require_once('/var/www/html/w...')
+#7 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#8 /var/www/html/wp-blog-header.php(13): require_once('/var/www/html/w...')
+#9 /var/www/html/index.php(17): require('/var/www/html/w...')
+#10 {main}
+  thrown in /var/www/html/wp-includes/class-wp-hook.php on line 308
+
+2023-06-01T20:00:58+00:00 CRITICAL Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, class Offers_Public does not have a method "woocommerce_remove_cart_item_data" in /var/www/html/wp-includes/class-wp-hook.php:308
+Stack trace:
+#0 /var/www/html/wp-includes/plugin.php(205): WP_Hook->apply_filters(true, Array)
+#1 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-form-handler.php(696): apply_filters('woocommerce_upd...', true)
+#2 /var/www/html/wp-includes/class-wp-hook.php(308): WC_Form_Handler::update_cart_action('')
+#3 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#4 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#5 /var/www/html/wp-settings.php(645): do_action('wp_loaded')
+#6 /var/www/html/wp-config.php(136): require_once('/var/www/html/w...')
+#7 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#8 /var/www/html/wp-blog-header.php(13): require_once('/var/www/html/w...')
+#9 /var/www/html/index.php(17): require('/var/www/html/w...')
+#10 {main}
+  thrown in /var/www/html/wp-includes/class-wp-hook.php on line 308
+
+2023-06-01T20:01:19+00:00 CRITICAL Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, class Offers_Public does not have a method "woocommerce_remove_cart_item_data" in /var/www/html/wp-includes/class-wp-hook.php:308
+Stack trace:
+#0 /var/www/html/wp-includes/plugin.php(205): WP_Hook->apply_filters(true, Array)
+#1 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-form-handler.php(696): apply_filters('woocommerce_upd...', true)
+#2 /var/www/html/wp-includes/class-wp-hook.php(308): WC_Form_Handler::update_cart_action('')
+#3 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#4 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#5 /var/www/html/wp-settings.php(645): do_action('wp_loaded')
+#6 /var/www/html/wp-config.php(136): require_once('/var/www/html/w...')
+#7 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#8 /var/www/html/wp-blog-header.php(13): require_once('/var/www/html/w...')
+#9 /var/www/html/index.php(17): require('/var/www/html/w...')
+#10 {main}
+  thrown in /var/www/html/wp-includes/class-wp-hook.php on line 308
+
+2023-06-01T20:01:34+00:00 CRITICAL Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, class Offers_Public does not have a method "woocommerce_remove_cart_item_data" in /var/www/html/wp-includes/class-wp-hook.php:308
+Stack trace:
+#0 /var/www/html/wp-includes/plugin.php(205): WP_Hook->apply_filters(true, Array)
+#1 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-form-handler.php(696): apply_filters('woocommerce_upd...', true)
+#2 /var/www/html/wp-includes/class-wp-hook.php(308): WC_Form_Handler::update_cart_action('')
+#3 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#4 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#5 /var/www/html/wp-settings.php(645): do_action('wp_loaded')
+#6 /var/www/html/wp-config.php(136): require_once('/var/www/html/w...')
+#7 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#8 /var/www/html/wp-blog-header.php(13): require_once('/var/www/html/w...')
+#9 /var/www/html/index.php(17): require('/var/www/html/w...')
+#10 {main}
+  thrown in /var/www/html/wp-includes/class-wp-hook.php on line 308
+
+2023-06-01T20:08:28+00:00 CRITICAL Uncaught Error: Class "OffersHelper" not found in /var/www/html/wp-content/plugins/offers/admin/class-offers-admin.php:110
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(308): Offers_Admin->crb_attach_offers_options('')
+#1 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /var/www/html/wp-content/plugins/offers/vendor/htmlburger/carbon-fields/core/Loader/Loader.php(113): do_action('carbon_fields_r...')
+#4 /var/www/html/wp-includes/class-wp-hook.php(308): Carbon_Fields\Loader\Loader->trigger_fields_register('')
+#5 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#6 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#7 /var/www/html/wp-settings.php(623): do_action('init')
+#8 /var/www/html/wp-config.php(136): require_once('/var/www/html/w...')
+#9 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#10 /var/www/html/wp-blog-header.php(13): require_once('/var/www/html/w...')
+#11 /var/www/html/index.php(17): require('/var/www/html/w...')
+#12 {main}
+  thrown in /var/www/html/wp-content/plugins/offers/admin/class-offers-admin.php on line 110
+
+2023-06-01T20:08:28+00:00 CRITICAL Uncaught Error: Class "OffersHelper" not found in /var/www/html/wp-content/plugins/offers/admin/class-offers-admin.php:110
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(308): Offers_Admin->crb_attach_offers_options('')
+#1 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /var/www/html/wp-content/plugins/offers/vendor/htmlburger/carbon-fields/core/Loader/Loader.php(113): do_action('carbon_fields_r...')
+#4 /var/www/html/wp-includes/class-wp-hook.php(308): Carbon_Fields\Loader\Loader->trigger_fields_register('')
+#5 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#6 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#7 /var/www/html/wp-settings.php(623): do_action('init')
+#8 /var/www/html/wp-config.php(136): require_once('/var/www/html/w...')
+#9 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#10 /var/www/html/wp-blog-header.php(13): require_once('/var/www/html/w...')
+#11 /var/www/html/index.php(17): require('/var/www/html/w...')
+#12 {main}
+  thrown in /var/www/html/wp-content/plugins/offers/admin/class-offers-admin.php on line 110
+
+2023-06-01T20:11:50+00:00 CRITICAL Uncaught Error: Class "OffersHelper" not found in /var/www/html/wp-content/plugins/offers/public/class-offers-public.php:165
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(308): Offers_Public->woocommerce_update_cart_action_cart_updated(true)
+#1 /var/www/html/wp-includes/plugin.php(205): WP_Hook->apply_filters(true, Array)
+#2 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-form-handler.php(696): apply_filters('woocommerce_upd...', true)
+#3 /var/www/html/wp-includes/class-wp-hook.php(308): WC_Form_Handler::update_cart_action('')
+#4 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#5 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#6 /var/www/html/wp-settings.php(645): do_action('wp_loaded')
+#7 /var/www/html/wp-config.php(136): require_once('/var/www/html/w...')
+#8 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#9 /var/www/html/wp-blog-header.php(13): require_once('/var/www/html/w...')
+#10 /var/www/html/index.php(17): require('/var/www/html/w...')
+#11 {main}
+  thrown in /var/www/html/wp-content/plugins/offers/public/class-offers-public.php on line 165
+
+2023-06-01T20:15:41+00:00 CRITICAL Uncaught Error: Call to undefined function dd() in /var/www/html/wp-content/plugins/offers/public/class-offers-public.php:173
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(308): Offers_Public->woocommerce_update_cart_action_cart_updated(true)
+#1 /var/www/html/wp-includes/plugin.php(205): WP_Hook->apply_filters(true, Array)
+#2 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-form-handler.php(696): apply_filters('woocommerce_upd...', true)
+#3 /var/www/html/wp-includes/class-wp-hook.php(308): WC_Form_Handler::update_cart_action('')
+#4 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#5 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#6 /var/www/html/wp-settings.php(645): do_action('wp_loaded')
+#7 /var/www/html/wp-config.php(136): require_once('/var/www/html/w...')
+#8 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#9 /var/www/html/wp-blog-header.php(13): require_once('/var/www/html/w...')
+#10 /var/www/html/index.php(17): require('/var/www/html/w...')
+#11 {main}
+  thrown in /var/www/html/wp-content/plugins/offers/public/class-offers-public.php on line 173
+
+2023-06-01T21:05:28+00:00 CRITICAL Uncaught TypeError: Offers_Public::woocommerce_update_cart_action_cart_updated(): Return value must be of type array, none returned in /var/www/html/wp-content/plugins/offers/public/class-offers-public.php:188
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(308): Offers_Public->woocommerce_update_cart_action_cart_updated(true)
+#1 /var/www/html/wp-includes/plugin.php(205): WP_Hook->apply_filters(true, Array)
+#2 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-form-handler.php(696): apply_filters('woocommerce_upd...', true)
+#3 /var/www/html/wp-includes/class-wp-hook.php(308): WC_Form_Handler::update_cart_action('')
+#4 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#5 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#6 /var/www/html/wp-settings.php(645): do_action('wp_loaded')
+#7 /var/www/html/wp-config.php(136): require_once('/var/www/html/w...')
+#8 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#9 /var/www/html/wp-blog-header.php(13): require_once('/var/www/html/w...')
+#10 /var/www/html/index.php(17): require('/var/www/html/w...')
+#11 {main}
+  thrown in /var/www/html/wp-content/plugins/offers/public/class-offers-public.php on line 188
+
+2023-06-01T22:30:31+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function Offers_Public::woocommerce_cart_item_quantity(), 2 passed in /var/www/html/wp-includes/class-wp-hook.php on line 310 and exactly 3 expected in /var/www/html/wp-content/plugins/offers/public/class-offers-public.php:266
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(310): Offers_Public->woocommerce_cart_item_quantity('1 <input type="...', 'c51ce410c124a10...')
+#1 /var/www/html/wp-includes/plugin.php(205): WP_Hook->apply_filters('1 <input type="...', Array)
+#2 /var/www/html/wp-content/plugins/woocommerce/templates/cart/cart.php(125): apply_filters('woocommerce_car...', '<div class="qua...', 'c51ce410c124a10...', Array)
+#3 /var/www/html/wp-content/plugins/woocommerce/includes/wc-core-functions.php(345): include('/var/www/html/w...')
+#4 /var/www/html/wp-content/plugins/woocommerce/includes/shortcodes/class-wc-shortcode-cart.php(99): wc_get_template('cart/cart.php')
+#5 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shortcodes.php(72): WC_Shortcode_Cart::output(Array)
+#6 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shortcodes.php(85): WC_Shortcodes::shortcode_wrapper(Array)
+#7 /var/www/html/wp-includes/shortcodes.php(355): WC_Shortcodes::cart('', '', 'woocommerce_car...')
+#8 [internal function]: do_shortcode_tag(Array)
+#9 /var/www/html/wp-includes/shortcodes.php(227): preg_replace_callback('/\\[(\\[?)(woocom...', 'do_shortcode_ta...', '[woocommerce_ca...')
+#10 /var/www/html/wp-includes/class-wp-hook.php(308): do_shortcode('[woocommerce_ca...')
+#11 /var/www/html/wp-includes/plugin.php(205): WP_Hook->apply_filters('[woocommerce_ca...', Array)
+#12 /var/www/html/wp-includes/post-template.php(255): apply_filters('the_content', '<!-- wp:shortco...')
+#13 /var/www/html/wp-content/themes/store/modules/content/content-page.php(15): the_content()
+#14 /var/www/html/wp-includes/template.php(785): require('/var/www/html/w...')
+#15 /var/www/html/wp-includes/template.php(718): load_template('/var/www/html/w...', false, Array)
+#16 /var/www/html/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#17 /var/www/html/wp-content/themes/store/page.php(20): get_template_part('modules/content...', 'page')
+#18 /var/www/html/wp-includes/template-loader.php(106): include('/var/www/html/w...')
+#19 /var/www/html/wp-blog-header.php(19): require_once('/var/www/html/w...')
+#20 /var/www/html/index.php(17): require('/var/www/html/w...')
+#21 {main}
+  thrown in /var/www/html/wp-content/plugins/offers/public/class-offers-public.php on line 266
+
+2023-06-01T22:41:38+00:00 CRITICAL Uncaught Error: Cannot use object of type WC_Product_Simple as array in /var/www/html/wp-content/plugins/offers/utils/OfferHelper.php:46
+Stack trace:
+#0 /var/www/html/wp-content/plugins/offers/public/class-offers-public.php(270): OfferHelper::isOfferProduct('13')
+#1 /var/www/html/wp-includes/class-wp-hook.php(308): Offers_Public->woocommerce_cart_item_quantity('<div class="qua...', 'c51ce410c124a10...', Array)
+#2 /var/www/html/wp-includes/plugin.php(205): WP_Hook->apply_filters('<div class="qua...', Array)
+#3 /var/www/html/wp-content/plugins/woocommerce/templates/cart/cart.php(125): apply_filters('woocommerce_car...', '<div class="qua...', 'c51ce410c124a10...', Array)
+#4 /var/www/html/wp-content/plugins/woocommerce/includes/wc-core-functions.php(345): include('/var/www/html/w...')
+#5 /var/www/html/wp-content/plugins/woocommerce/includes/shortcodes/class-wc-shortcode-cart.php(99): wc_get_template('cart/cart.php')
+#6 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shortcodes.php(72): WC_Shortcode_Cart::output(Array)
+#7 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shortcodes.php(85): WC_Shortcodes::shortcode_wrapper(Array)
+#8 /var/www/html/wp-includes/shortcodes.php(355): WC_Shortcodes::cart('', '', 'woocommerce_car...')
+#9 [internal function]: do_shortcode_tag(Array)
+#10 /var/www/html/wp-includes/shortcodes.php(227): preg_replace_callback('/\\[(\\[?)(woocom...', 'do_shortcode_ta...', '[woocommerce_ca...')
+#11 /var/www/html/wp-includes/class-wp-hook.php(308): do_shortcode('[woocommerce_ca...')
+#12 /var/www/html/wp-includes/plugin.php(205): WP_Hook->apply_filters('[woocommerce_ca...', Array)
+#13 /var/www/html/wp-includes/post-template.php(255): apply_filters('the_content', '<!-- wp:shortco...')
+#14 /var/www/html/wp-content/themes/store/modules/content/content-page.php(15): the_content()
+#15 /var/www/html/wp-includes/template.php(785): require('/var/www/html/w...')
+#16 /var/www/html/wp-includes/template.php(718): load_template('/var/www/html/w...', false, Array)
+#17 /var/www/html/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#18 /var/www/html/wp-content/themes/store/page.php(20): get_template_part('modules/content...', 'page')
+#19 /var/www/html/wp-includes/template-loader.php(106): include('/var/www/html/w...')
+#20 /var/www/html/wp-blog-header.php(19): require_once('/var/www/html/w...')
+#21 /var/www/html/index.php(17): require('/var/www/html/w...')
+#22 {main}
+  thrown in /var/www/html/wp-content/plugins/offers/utils/OfferHelper.php on line 46
+
+2023-06-01T22:42:27+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function WC_Product::get_attribute(), 0 passed in /var/www/html/wp-content/plugins/offers/utils/OfferHelper.php on line 46 and exactly 1 expected in /var/www/html/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-product.php:2004
+Stack trace:
+#0 /var/www/html/wp-content/plugins/offers/utils/OfferHelper.php(46): WC_Product->get_attribute()
+#1 /var/www/html/wp-content/plugins/offers/public/class-offers-public.php(270): OfferHelper::isOfferProduct('13')
+#2 /var/www/html/wp-includes/class-wp-hook.php(308): Offers_Public->woocommerce_cart_item_quantity('<div class="qua...', 'c51ce410c124a10...', Array)
+#3 /var/www/html/wp-includes/plugin.php(205): WP_Hook->apply_filters('<div class="qua...', Array)
+#4 /var/www/html/wp-content/plugins/woocommerce/templates/cart/cart.php(125): apply_filters('woocommerce_car...', '<div class="qua...', 'c51ce410c124a10...', Array)
+#5 /var/www/html/wp-content/plugins/woocommerce/includes/wc-core-functions.php(345): include('/var/www/html/w...')
+#6 /var/www/html/wp-content/plugins/woocommerce/includes/shortcodes/class-wc-shortcode-cart.php(99): wc_get_template('cart/cart.php')
+#7 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shortcodes.php(72): WC_Shortcode_Cart::output(Array)
+#8 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shortcodes.php(85): WC_Shortcodes::shortcode_wrapper(Array)
+#9 /var/www/html/wp-includes/shortcodes.php(355): WC_Shortcodes::cart('', '', 'woocommerce_car...')
+#10 [internal function]: do_shortcode_tag(Array)
+#11 /var/www/html/wp-includes/shortcodes.php(227): preg_replace_callback('/\\[(\\[?)(woocom...', 'do_shortcode_ta...', '[woocommerce_ca...')
+#12 /var/www/html/wp-includes/class-wp-hook.php(308): do_shortcode('[woocommerce_ca...')
+#13 /var/www/html/wp-includes/plugin.php(205): WP_Hook->apply_filters('[woocommerce_ca...', Array)
+#14 /var/www/html/wp-includes/post-template.php(255): apply_filters('the_content', '<!-- wp:shortco...')
+#15 /var/www/html/wp-content/themes/store/modules/content/content-page.php(15): the_content()
+#16 /var/www/html/wp-includes/template.php(785): require('/var/www/html/w...')
+#17 /var/www/html/wp-includes/template.php(718): load_template('/var/www/html/w...', false, Array)
+#18 /var/www/html/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#19 /var/www/html/wp-content/themes/store/page.php(20): get_template_part('modules/content...', 'page')
+#20 /var/www/html/wp-includes/template-loader.php(106): include('/var/www/html/w...')
+#21 /var/www/html/wp-blog-header.php(19): require_once('/var/www/html/w...')
+#22 /var/www/html/index.php(17): require('/var/www/html/w...')
+#23 {main}
+  thrown in /var/www/html/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-product.php on line 2004
+
+2023-06-01T22:53:56+00:00 CRITICAL Uncaught TypeError: Offers_Public::woocommerce_remove_cart_item(): Return value must be of type array, none returned in /var/www/html/wp-content/plugins/offers/public/class-offers-public.php:223
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(308): Offers_Public->woocommerce_remove_cart_item('c51ce410c124a10...', Object(WC_Cart))
+#1 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-cart.php(1304): do_action('woocommerce_rem...', 'c51ce410c124a10...', Object(WC_Cart))
+#4 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-form-handler.php(618): WC_Cart->remove_cart_item('c51ce410c124a10...')
+#5 /var/www/html/wp-includes/class-wp-hook.php(308): WC_Form_Handler::update_cart_action('')
+#6 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#7 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#8 /var/www/html/wp-settings.php(645): do_action('wp_loaded')
+#9 /var/www/html/wp-config.php(136): require_once('/var/www/html/w...')
+#10 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#11 /var/www/html/wp-blog-header.php(13): require_once('/var/www/html/w...')
+#12 /var/www/html/index.php(17): require('/var/www/html/w...')
+#13 {main}
+  thrown in /var/www/html/wp-content/plugins/offers/public/class-offers-public.php on line 223
+
+2023-06-01T22:58:05+00:00 CRITICAL Uncaught TypeError: Offers_Public::woocommerce_remove_cart_item(): Return value must be of type array, none returned in /var/www/html/wp-content/plugins/offers/public/class-offers-public.php:226
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(308): Offers_Public->woocommerce_remove_cart_item('c51ce410c124a10...', Object(WC_Cart))
+#1 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-cart.php(1304): do_action('woocommerce_rem...', 'c51ce410c124a10...', Object(WC_Cart))
+#4 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-form-handler.php(618): WC_Cart->remove_cart_item('c51ce410c124a10...')
+#5 /var/www/html/wp-includes/class-wp-hook.php(308): WC_Form_Handler::update_cart_action('')
+#6 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#7 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#8 /var/www/html/wp-settings.php(645): do_action('wp_loaded')
+#9 /var/www/html/wp-config.php(136): require_once('/var/www/html/w...')
+#10 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#11 /var/www/html/wp-blog-header.php(13): require_once('/var/www/html/w...')
+#12 /var/www/html/index.php(17): require('/var/www/html/w...')
+#13 {main}
+  thrown in /var/www/html/wp-content/plugins/offers/public/class-offers-public.php on line 226
+
+2023-06-01T22:58:26+00:00 CRITICAL Uncaught TypeError: Offers_Public::woocommerce_remove_cart_item(): Return value must be of type array, WC_Cart returned in /var/www/html/wp-content/plugins/offers/public/class-offers-public.php:226
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(308): Offers_Public->woocommerce_remove_cart_item('c51ce410c124a10...', Object(WC_Cart))
+#1 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-cart.php(1304): do_action('woocommerce_rem...', 'c51ce410c124a10...', Object(WC_Cart))
+#4 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-form-handler.php(618): WC_Cart->remove_cart_item('c51ce410c124a10...')
+#5 /var/www/html/wp-includes/class-wp-hook.php(308): WC_Form_Handler::update_cart_action('')
+#6 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#7 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#8 /var/www/html/wp-settings.php(645): do_action('wp_loaded')
+#9 /var/www/html/wp-config.php(136): require_once('/var/www/html/w...')
+#10 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#11 /var/www/html/wp-blog-header.php(13): require_once('/var/www/html/w...')
+#12 /var/www/html/index.php(17): require('/var/www/html/w...')
+#13 {main}
+  thrown in /var/www/html/wp-content/plugins/offers/public/class-offers-public.php on line 226
+
+2023-06-01T22:58:49+00:00 CRITICAL Uncaught TypeError: Offers_Public::woocommerce_remove_cart_item(): Return value must be of type array, string returned in /var/www/html/wp-content/plugins/offers/public/class-offers-public.php:226
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(308): Offers_Public->woocommerce_remove_cart_item('c51ce410c124a10...', Object(WC_Cart))
+#1 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-cart.php(1304): do_action('woocommerce_rem...', 'c51ce410c124a10...', Object(WC_Cart))
+#4 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-form-handler.php(618): WC_Cart->remove_cart_item('c51ce410c124a10...')
+#5 /var/www/html/wp-includes/class-wp-hook.php(308): WC_Form_Handler::update_cart_action('')
+#6 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#7 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#8 /var/www/html/wp-settings.php(645): do_action('wp_loaded')
+#9 /var/www/html/wp-config.php(136): require_once('/var/www/html/w...')
+#10 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#11 /var/www/html/wp-blog-header.php(13): require_once('/var/www/html/w...')
+#12 /var/www/html/index.php(17): require('/var/www/html/w...')
+#13 {main}
+  thrown in /var/www/html/wp-content/plugins/offers/public/class-offers-public.php on line 226
+
