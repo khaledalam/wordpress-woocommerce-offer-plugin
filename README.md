@@ -4,7 +4,8 @@
 
 Demo video: 
 
-https://github.com/khaledalam/wordpress-woocommerce-offer-plugin/assets/8682067/4cc3f06d-7daa-4011-9c3f-f7b7a74f83b1
+
+https://github.com/khaledalam/wordpress-woocommerce-offer-plugin/assets/8682067/5f512a57-bc91-4191-9704-079c2753c0b6
 
 
 
