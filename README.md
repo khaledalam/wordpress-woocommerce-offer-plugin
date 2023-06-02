@@ -2,7 +2,12 @@
 
 #### Custom wordpress plugin to add woocommerce offers/gifts for specific products' categories.
 
-Demo video:
+Demo video: 
+
+https://github.com/khaledalam/wordpress-woocommerce-offer-plugin/assets/8682067/4cc3f06d-7daa-4011-9c3f-f7b7a74f83b1
+
+
+
 
 DB dump: [wordpress.sql](./wordpress.sql)
 
