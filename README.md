@@ -11,6 +11,8 @@ https://github.com/khaledalam/wordpress-woocommerce-offer-plugin/assets/8682067/
 
 DB dump: [wordpress.sql](./wordpress.sql)
 
+Test cases: [test_cases](./test_cases)
+
 ---
 
 ### Problem/requirements
@@ -66,6 +68,7 @@ pass: password<br>
 
 
 > $ docker-compose up -d --build
+
 
 
 ---
