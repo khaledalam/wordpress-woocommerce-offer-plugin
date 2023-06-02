@@ -15,12 +15,12 @@ class OfferHelper {
             'posts_per_page' => -1,
             'post_status' => 'publish',
             'orderby' => 'id',
-            'meta_query' => [ // "Offer" has 0 price and custom attribute "is_offer"
-                [
-                    'key'       => '_price',
-                    'compare'   => '=',
-                    'value'      => 0,
-                ],
+            'meta_query' => [ //  custom attribute "is_offer"
+//                [ // and has 0 price
+//                    'key'       => '_price',
+//                    'compare'   => '=',
+//                    'value'      => 0,
+//                ],
                 [
                     'key'       => '_product_attributes',
                     'compare'   => 'LIKE',

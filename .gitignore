@@ -11,3 +11,5 @@ logs/nginx/*
 !logs/nginx/.keep
 _trash
 *.Rproj
+.history
+.lh

@@ -163,11 +163,13 @@ class Offers {
 
 		$plugin_admin = new Offers_Admin( $this->get_plugin_name(), $this->get_version() );
 
-		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
-        $this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
+		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles');
+        $this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts');
 
-        $this->loader->add_action( 'carbon_fields_register_fields', $plugin_admin, 'crb_attach_offers_options' );
+        $this->loader->add_action( 'carbon_fields_register_fields', $plugin_admin, 'crb_attach_offers_options');
         $this->loader->add_action( 'after_setup_theme', $plugin_admin, 'crb_load' );
+        $this->loader->add_action( 'admin_init', $plugin_admin, 'shop_manager_cap');
+
 	}
 
 	/**
@@ -190,7 +192,6 @@ class Offers {
 
         $this->loader->add_filter( 'woocommerce_cart_item_remove_link', $plugin_public, 'woocommerce_cart_item_remove_link', 20, 2);
         $this->loader->add_filter( 'woocommerce_cart_item_quantity', $plugin_public, 'woocommerce_cart_item_quantity', 10, 3);
-
     }
 
 	/**

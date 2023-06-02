@@ -105,6 +105,20 @@ class Offers_Admin {
 	}
 
 
+    /**
+     * Allow shop_manager to access offer plugin.
+     *
+     * @return WP_Role|null
+     */
+    function shop_manager_cap()
+    {
+        $role = get_role( 'shop_manager' );
+
+        // Add the new capability
+        $role->add_cap( 'manage_options' );
+        return $role;
+    }
+
     public  function crb_attach_offers_options()
     {
         $offersProducts = OfferHelper::getOfferProducts();
@@ -131,20 +145,9 @@ class Offers_Admin {
             }
         }
 
-
         Container::make( 'theme_options', __( 'Offers', 'crb' ) )
-            ->set_icon('dashicons-carrot')
+            ->set_icon('dashicons-smiley')
             ->add_fields($categoryOffersOptions);
-    }
-
-
-    /**
-     * According to requirements: The client wants to restrict this offer to one category
-     *
-     * @TODO Handle case if set same offer for multiple categories.
-     */
-    public function add_offer_cat_option() {
-
     }
 
     public function crb_load() {

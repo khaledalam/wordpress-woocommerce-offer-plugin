@@ -131,6 +131,8 @@ class Offers_Public {
     /**
      * Function for `woocommerce_update_cart_action_cart_updated` action-hook.
      *
+     * Handle change quantity of products in cart.
+     *
      * Logic:
      * 1) Iterate over product which are not an "offer" products,
      * and check if the product is eligible for "offer",
@@ -252,7 +254,7 @@ class Offers_Public {
     /**
      * Function for `woocommerce_cart_item_quantity` filter-hook.
      *
-     * remove the quantity input of "offer" products on cart page.
+     * Remove the quantity input of "offer" products on cart page.
      *
      * @param $product_quantity
      * @param $cart_item_key
