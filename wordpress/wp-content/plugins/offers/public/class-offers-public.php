@@ -116,7 +116,7 @@ class Offers_Public {
      * @return array
      * @throws Exception
      */
-    function woocommerce_add_cart_item_data(array $cart_item_data, $product_id): array
+    public function woocommerce_add_cart_item_data(array $cart_item_data, $product_id): array
     {
         $productQuantity = empty($_POST['quantity']) ? 1 : wc_stock_amount($_POST['quantity']);
 
@@ -146,7 +146,7 @@ class Offers_Public {
      * @return array
      * @throws Exception
      */
-    function woocommerce_update_cart_action_cart_updated(): array
+    public function woocommerce_update_cart_action_cart_updated(): array
     {
         $cart = WC()->cart->cart_contents;
 
@@ -205,7 +205,7 @@ class Offers_Public {
      * @return array
      * @throws Exception
      */
-    function woocommerce_remove_cart_item($cart_item_key, $cart)
+    public function woocommerce_remove_cart_item($cart_item_key, $cart)
     {
         $productId = $cart->cart_contents[$cart_item_key]['product_id'];
         $productQuantity = $cart->cart_contents[$cart_item_key]['quantity'];
@@ -234,7 +234,7 @@ class Offers_Public {
      * @param $cart_item_key
      * @return mixed|string
      */
-    function woocommerce_cart_item_remove_link($button_link, $cart_item_key)
+    public function woocommerce_cart_item_remove_link($button_link, $cart_item_key)
     {
         $offersProductsIds = array_map(static function ($product) {
             return $product->ID;
@@ -261,11 +261,32 @@ class Offers_Public {
      * @param $cart_item
      * @return mixed|string
      */
-    function woocommerce_cart_item_quantity($product_quantity, $cart_item_key, $cart_item)
+    public function woocommerce_cart_item_quantity($product_quantity, $cart_item_key, $cart_item)
     {
         if(is_cart() && OfferHelper::isProductOffer($cart_item['product_id'])) {
             $product_quantity = sprintf( '%2$s <input type="hidden" name="cart[%1$s][qty]" value="%2$s" />', $cart_item_key, $cart_item['quantity'] );
         }
         return $product_quantity;
+    }
+
+    /**
+     * Function for `wp` action-hook.
+     *
+     * 1. Remove add to cart btn from single page of offers' products. [frontend side solution].
+     *
+     * @return void
+     */
+    public function action_wp(): void
+    {
+        if (!is_product()) {
+            return;
+        }
+
+        // Remove add to cart btn from single page of offers' products. [frontend side solution]
+        $product = get_product( get_queried_object_id() );
+
+        if( OfferHelper::isProductOffer($product->id) ) {
+            remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30 );
+        }
     }
 }

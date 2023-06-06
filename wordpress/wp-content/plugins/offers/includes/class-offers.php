@@ -189,6 +189,7 @@ class Offers {
         $this->loader->add_action( 'woocommerce_add_cart_item_data', $plugin_public, 'woocommerce_add_cart_item_data', 10, 2 );
         $this->loader->add_action( 'woocommerce_update_cart_action_cart_updated', $plugin_public, 'woocommerce_update_cart_action_cart_updated');
         $this->loader->add_action( 'woocommerce_remove_cart_item', $plugin_public, 'woocommerce_remove_cart_item', 10, 2);
+        $this->loader->add_action( 'wp', $plugin_public, 'action_wp');
 
         $this->loader->add_filter( 'woocommerce_cart_item_remove_link', $plugin_public, 'woocommerce_cart_item_remove_link', 20, 2);
         $this->loader->add_filter( 'woocommerce_cart_item_quantity', $plugin_public, 'woocommerce_cart_item_quantity', 10, 3);
