@@ -2,10 +2,7 @@
 
 #### Custom wordpress plugin to add woocommerce offers/gifts for specific products' categories.
 
-[README Version 1](README_v1.md)<br />
-README Version 2 [current]
-
-Demo video:
+Demo video: 
 
 
 https://github.com/khaledalam/wordpress-woocommerce-offer-plugin/assets/8682067/5f512a57-bc91-4191-9704-079c2753c0b6
@@ -13,8 +10,7 @@ https://github.com/khaledalam/wordpress-woocommerce-offer-plugin/assets/8682067/
 
 
 
-
-DB dump: [wordpress_v2.sql](./wordpress_v2.sql)
+DB dump: [wordpress.sql](./wordpress.sql)
 
 Test cases: [test_cases](./test_cases)
 
@@ -29,6 +25,7 @@ Test cases: [test_cases](./test_cases)
 ### Example
 
 - 3 t-shirt products => belongs to [Special Category] => add gift product(Clothes Hanger) for each item.
+- 2 drink products => belongs to [Super Special Category] => add gift product(Shalimo) for each item.
 - 2 short products => belongs to [Uncategorized] => add no gifts.
 
 <img src="./admin.png"/><br/>
@@ -36,24 +33,27 @@ Test cases: [test_cases](./test_cases)
 
 ----------------------------------------------------------------
 ### Approach/solution/technical
-- Create custom woocommerce product settings section "Offers Products" that will allow the admin & shop manager to manage/set categories <-> gifts association in the dashboard.
+- Create custom plugin (Offer) that will allow the admin & shop manager to manage/set categories <-> gifts association in the dashboard.
 - Use filters/actions hooks:
   - <b>Actions</b>:
-    - carbon_fields_register_fields
-    - after_setup_theme
     - woocommerce_add_cart_item_data
+      - <small>Trigger when add product to cart from /shop page or single-product page.</small>
     - woocommerce_update_cart_action_cart_updated
+        - <small>Handle change quantity of products in cart.</small>
     - woocommerce_remove_cart_item
-    - wp
+      - <small>Handle removing items from cart.</small>
+    - admin_init
+      - <small>Allow shop_manager to access offer plugin.</small>
   - <b>Filters</b>:
-    - woocommerce_get_sections_products 
-    - woocommerce_get_settings_products
     - woocommerce_cart_item_remove_link
+      - <small>Remove the remove item button in cart for "offer" products.</small>
     - woocommerce_cart_item_quantity
+      - <small>Remove the quantity input of "offer" products on cart page.</small>
 - No hard-coded
-- "Offer" product marking depends set product id in  woocommerce product settings section "Offers Products"
-- Relation between product's category<->"offer" product depends on wc options `product_offer_cat_term_id` and `product_offer_id`.
-
+- "Offer" product marking depends on custom product attribute "is_offer" key
+  - to use 0-pricing also as a mark uncomment `meta_query` in `OfferHelper::getOfferProducts()` and edit `OfferHelper::isProductOffer()` as well.
+- Relation between product's category<->"offer" product depends on option with key `offers_key_cat_term_id_product_id_{$category->term_id}` existence.
+      
 ---
 ### Auth:
 admin:<br>
