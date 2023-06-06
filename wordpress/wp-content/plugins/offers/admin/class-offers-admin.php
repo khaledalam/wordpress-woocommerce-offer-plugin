@@ -155,9 +155,6 @@ class Offers_Admin {
             'hierarchical' => 1,
             'hide_empty'   => true,
         ]);
-        $categories = array_filter($categories, static function($category): bool {
-            return $category->taxonomy === 'product_cat';
-        });
         $categoryOffersOptions = [];
         foreach ($categories as $category) {
             if ($category->taxonomy === 'product_cat') {
