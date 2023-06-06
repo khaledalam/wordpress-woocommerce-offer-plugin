@@ -170,7 +170,10 @@ class Offers {
         $this->loader->add_action( 'after_setup_theme', $plugin_admin, 'crb_load' );
         $this->loader->add_action( 'admin_init', $plugin_admin, 'shop_manager_cap');
 
-	}
+        $this->loader->add_filter( 'woocommerce_get_sections_products', $plugin_admin, 'products_offers_add_section', 10, 3);
+        $this->loader->add_filter( 'woocommerce_get_settings_products', $plugin_admin, 'products_offers_all_settings', 10, 2);
+
+    }
 
 	/**
 	 * Register all of the hooks related to the public-facing functionality

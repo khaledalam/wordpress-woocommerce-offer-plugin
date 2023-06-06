@@ -38,9 +38,10 @@ class OfferHelper {
      */
     public static function isProductOffer(string $productId): bool
     {
-        $product = wc_get_product($productId);
+        // woocommerce option
+        $offerProductId = get_option('product_offer_id');
 
-        return array_key_exists('is_offer', $product->get_attributes());
+        return $offerProductId === $productId;
     }
 
     /**

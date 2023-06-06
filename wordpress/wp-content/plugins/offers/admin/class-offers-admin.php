@@ -101,16 +101,17 @@ class Offers_Admin {
 		 */
 
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/offers-admin.js', array( 'jquery' ), $this->version, false );
-
 	}
 
 
     /**
+     * Function for `admin_init` action-hook.
+     *
      * Allow shop_manager to access offer plugin.
      *
      * @return WP_Role|null
      */
-    function shop_manager_cap()
+    public function shop_manager_cap()
     {
         $role = get_role( 'shop_manager' );
 
@@ -119,7 +120,12 @@ class Offers_Admin {
         return $role;
     }
 
-    public  function crb_attach_offers_options()
+    /**
+     * Function for `carbon_fields_register_fields` action-hook.
+     *
+     * Register carbon fields.
+     */
+    public function crb_attach_offers_options(): void
     {
         $offersProducts = OfferHelper::getOfferProducts();
 
@@ -150,7 +156,67 @@ class Offers_Admin {
             ->add_fields($categoryOffersOptions);
     }
 
-    public function crb_load() {
+    /**
+     * Function for `after_setup_theme` action-hook.
+     *
+     * Load Carbon Fields.
+     */
+    public function crb_load(): void
+    {
         Carbon_Fields::boot();
     }
+
+    /**
+     * Function for `woocommerce_get_sections_products` filter-hook.
+     *
+     * Add "Offers Products" section in products tab.
+     *
+     * @param $sections
+     * @return mixed
+     */
+    public function products_offers_add_section( $sections ): mixed
+    {
+        $sections['products_offers'] = __( 'Offers Products', 'text-domain' );
+        return $sections;
+    }
+
+    /**
+     * Function for `woocommerce_get_settings_products` filter-hook.
+     *
+     * @param $settings
+     * @param $current_section
+     * @return array|mixed
+     */
+    public function products_offers_all_settings( $settings, $current_section ): mixed
+    {
+        /**
+         * Check if the current section is what we want
+         **/
+        if ( $current_section === 'products_offers' ) {
+            $settings_slider = [];
+            // Add Title to the Settings
+            $settings_slider[] = [
+                'name' => __( 'Offers Products Settings', 'text-domain' ),
+                'type' => 'title',
+                'desc' => __( 'The following options are used to configure products offers.', 'text-domain' ),
+                'id' => 'products_offers_title'
+            ];
+
+            // Add text field option
+            $settings_slider[] = [
+                'name'     => __( 'Product ID', 'text-domain' ),
+                'desc_tip' => __( 'This will set the product id as an offer', 'text-domain' ),
+                'id'       => 'product_offer_id',
+                'type'     => 'text',
+                'desc'     => __( 'Enter Product ID that you want to set it as an offer!', 'text-domain' ),
+            ];
+
+            $settings_slider[] = [ 'type' => 'sectionend', 'id' => 'product_offer' ];
+            return $settings_slider;
+        }
+
+        return $settings;
+    }
+
+
 }
