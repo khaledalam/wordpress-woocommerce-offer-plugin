@@ -103,23 +103,6 @@ class Offers_Admin {
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/offers-admin.js', array( 'jquery' ), $this->version, false );
 	}
 
-
-    /**
-     * Function for `admin_init` action-hook.
-     *
-     * Allow shop_manager to access offer plugin.
-     *
-     * @return WP_Role|null
-     */
-    public function shop_manager_cap(): ?WP_Role
-    {
-        $role = get_role( 'shop_manager' );
-
-        // Add the new capability
-        $role->add_cap( 'manage_options' );
-        return $role;
-    }
-
     /**
      * Function for `carbon_fields_register_fields` action-hook.
      *
