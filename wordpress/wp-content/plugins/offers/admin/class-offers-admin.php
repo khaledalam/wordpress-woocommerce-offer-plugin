@@ -86,7 +86,7 @@ class Offers_Admin {
 	 *
 	 * @since    1.0.0
 	 */
-	public function enqueue_scripts() {
+       public function enqueue_scripts() {
 
 		/**
 		 * This function is provided for demonstration purposes only.
@@ -111,7 +111,7 @@ class Offers_Admin {
      *
      * @return WP_Role|null
      */
-    public function shop_manager_cap()
+    public function shop_manager_cap(): ?WP_Role
     {
         $role = get_role( 'shop_manager' );
 
@@ -127,33 +127,10 @@ class Offers_Admin {
      */
     public function crb_attach_offers_options(): void
     {
-        $offersProducts = OfferHelper::getOfferProducts();
-
-        $offersProductsOptions = ['NA' => 'N/A'];
-        foreach ($offersProducts as $product) {
-            $offersProductsOptions[$product->ID] = $product->post_name;
-        }
-
-        $categories = get_terms([
-            'orderby'      => 'name',
-            'pad_counts'   => false,
-            'hierarchical' => 1,
-            'hide_empty'   => true,
-        ]);
-        foreach ($categories as $category) {
-            if ($category->taxonomy === 'product_cat') {
-
-                $categoryOffersOptions[] = Field::make(
-                    'select',
-                    'offers_key_cat_term_id_product_id_' . $category->term_id,
-                    '"' . $category->name . '" category will be eligible for:'
-                )->add_options($offersProductsOptions);
-            }
-        }
+        // @TODO: Use it for other purpose.
 
         Container::make( 'theme_options', __( 'Offers', 'crb' ) )
-            ->set_icon('dashicons-smiley')
-            ->add_fields($categoryOffersOptions);
+            ->set_icon('dashicons-smiley');
     }
 
     /**
@@ -189,6 +166,22 @@ class Offers_Admin {
      */
     public function products_offers_all_settings( $settings, $current_section ): mixed
     {
+        $categories = get_terms([
+            'orderby'      => 'name',
+            'pad_counts'   => false,
+            'hierarchical' => 1,
+            'hide_empty'   => true,
+        ]);
+        $categories = array_filter($categories, static function($category): bool {
+            return $category->taxonomy === 'product_cat';
+        });
+        $categoryOffersOptions = [];
+        foreach ($categories as $category) {
+            if ($category->taxonomy === 'product_cat') {
+                $categoryOffersOptions[$category->term_id] = $category->name;
+            }
+        }
+
         /**
          * Check if the current section is what we want
          **/
@@ -202,7 +195,7 @@ class Offers_Admin {
                 'id' => 'products_offers_title'
             ];
 
-            // Add text field option
+            // Add text field option: product offer ID
             $settings_slider[] = [
                 'name'     => __( 'Product ID', 'text-domain' ),
                 'desc_tip' => __( 'This will set the product id as an offer', 'text-domain' ),
@@ -211,12 +204,21 @@ class Offers_Admin {
                 'desc'     => __( 'Enter Product ID that you want to set it as an offer!', 'text-domain' ),
             ];
 
+            // Add text field option: Offer -> apply to category_term_id
+            $settings_slider[] = [
+                'name'     => __( 'Apply Offer To Category', 'text-domain' ),
+                'desc_tip' => __( 'This will set the product id as an offer', 'text-domain' ),
+                'id'       => 'product_offer_cat_term_id',
+                'type'     => 'select',
+                'desc'     => __( 'Select Category that offer will apply to it!', 'text-domain' ),
+                'options' => $categoryOffersOptions
+            ];
+
             $settings_slider[] = [ 'type' => 'sectionend', 'id' => 'product_offer' ];
             return $settings_slider;
         }
 
         return $settings;
     }
-
 
 }

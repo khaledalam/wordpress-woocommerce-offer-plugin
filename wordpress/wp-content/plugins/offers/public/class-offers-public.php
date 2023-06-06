@@ -10,6 +10,8 @@
  * @subpackage Offers/public
  */
 
+use utils\OfferHelper;
+
 /**
  * The public-facing functionality of the plugin.
  *
@@ -59,7 +61,8 @@ class Offers_Public {
 	 *
 	 * @since    1.0.0
 	 */
-	public function enqueue_styles() {
+	public function enqueue_styles(): void
+    {
 
 		/**
 		 * This function is provided for demonstration purposes only.
@@ -82,8 +85,8 @@ class Offers_Public {
 	 *
 	 * @since    1.0.0
 	 */
-	public function enqueue_scripts() {
-
+    public function enqueue_scripts(): void
+    {
 		/**
 		 * This function is provided for demonstration purposes only.
 		 *
@@ -112,11 +115,11 @@ class Offers_Public {
      *
      *
      * @param array $cart_item_data Array of cart item data being added to the cart.
-     * @param $product_id
+     * @param string $product_id
      * @return array
      * @throws Exception
      */
-    public function woocommerce_add_cart_item_data(array $cart_item_data, $product_id): array
+    public function woocommerce_add_cart_item_data(array $cart_item_data, string $product_id): array
     {
         $productQuantity = empty($_POST['quantity']) ? 1 : wc_stock_amount($_POST['quantity']);
 
@@ -134,26 +137,25 @@ class Offers_Public {
      * Handle change quantity of products in cart.
      *
      * Logic:
-     * 1) Iterate over product which are not an "offer" products,
-     * and check if the product is eligible for "offer",
-     * if so mark the quantity of this "offer" product.
+     * 1) remove offers products from cart.
+     * 2) add offers products to cart based on existed eligible quantity of other products.
      *
-     * 2) Update "offer" products quantities using the mark map array.
-     *
-     * 3) if there are "offer" products marked and are not existed in the cart content, add them.
-     *
-     *
-     * @return array
      * @throws Exception
      */
-    public function woocommerce_update_cart_action_cart_updated(): array
+    public function woocommerce_update_cart_action_cart_updated()
     {
         $cart = WC()->cart->cart_contents;
 
-        $offerProductIdToQuantityMap = [];
+        // Remove all offers
+        foreach($cart as $cartItemKey => $values) {
+            $cartItem = $cart[$cartItemKey];
+            // if product is an "offer" product
+            if (OfferHelper::isProductOffer($cartItem['product_id'])) {
+                WC()->cart->remove_cart_item($cartItemKey);
+            }
+        }
 
         foreach($cart as $cartItemKey => $values) {
-
             $cartItem = $cart[$cartItemKey];
 
             // if product is not an "offer" product
@@ -161,35 +163,9 @@ class Offers_Public {
 
                 // If eligible for "offer" add the offer product to the cart X amount of times.
                 if ($offerProductId = OfferHelper::productEligibleForOffer($cartItem['product_id'], true)) {
-
-                    if (!isset($offerProductIdToQuantityMap[$offerProductId])) {
-                        $offerProductIdToQuantityMap[$offerProductId] = 0;
-                    }
-
-                    $offerProductIdToQuantityMap[$offerProductId] += $cartItem['quantity'];
+                    WC()->cart->add_to_cart($offerProductId, $cartItem['quantity']);
                 }
             }
-        }
-
-        foreach($cart as $cartItemKey => $values) {
-
-            $cartItem = $cart[$cartItemKey];
-
-            // if product is an "offer" product
-            if (OfferHelper::isProductOffer($cartItem['product_id'])) {
-
-                WC()->cart->set_quantity($cartItemKey, $offerProductIdToQuantityMap[$cartItem['product_id']]);
-
-                // for case update quantity of "offer" product to 0
-                // supports woocommerce_cart_item_quantity from backend side.
-                unset($offerProductIdToQuantityMap[$cartItem['product_id']]);
-            }
-        }
-
-        // for case update quantity of "offer" product to 0
-        // supports woocommerce_cart_item_quantity from backend side.
-        foreach ($offerProductIdToQuantityMap as $productId => $quantity) {
-            WC()->cart->add_to_cart($productId, $quantity);
         }
 
         return $cart;
@@ -202,26 +178,27 @@ class Offers_Public {
      *
      * @param $cart_item_key
      * @param $cart
-     * @return array
-     * @throws Exception
+     * @return mixed
      */
-    public function woocommerce_remove_cart_item($cart_item_key, $cart)
-    {
-        $productId = $cart->cart_contents[$cart_item_key]['product_id'];
-        $productQuantity = $cart->cart_contents[$cart_item_key]['quantity'];
+     public function woocommerce_remove_cart_item($cart_item_key, $cart)
+     {
+         $productId = $cart->cart_contents[$cart_item_key]['product_id'];
+         $productQuantity = $cart->cart_contents[$cart_item_key]['quantity'];
 
-        if ($offerProductId = OfferHelper::productEligibleForOffer($productId, true)) {
+         if ($offerProductId = OfferHelper::productEligibleForOffer($productId, true)) {
 
-            foreach (WC()->cart->get_cart() as $cart_item_key2 => $cart_item) {
-                if ($cart_item['product_id'] === $offerProductId) {
-                    $newQuantity = $cart_item['quantity'] - $productQuantity;
-                    WC()->cart->set_quantity($cart_item_key2, $newQuantity);
-                    break;
-                }
-            }
-        }
+             foreach (WC()->cart->get_cart() as $cart_item_key2 => $cart_item) {
 
-        return $cart;
+                 if ((string)$cart_item['product_id'] === $offerProductId) {
+                     $newQuantity = $cart_item['quantity'] - $productQuantity;
+                     WC()->cart->set_quantity($cart_item_key2, $newQuantity);
+                     break;
+                 }
+             }
+         }
+//         do_action('woocommerce_update_cart_action_cart_updated');
+
+         return $cart;
     }
 
     /**
@@ -232,19 +209,15 @@ class Offers_Public {
      *
      * @param $button_link
      * @param $cart_item_key
-     * @return mixed|string
+     * @return mixed
      */
-    public function woocommerce_cart_item_remove_link($button_link, $cart_item_key)
+    public function woocommerce_cart_item_remove_link($button_link, $cart_item_key): mixed
     {
-        $offersProductsIds = array_map(static function ($product) {
-            return $product->ID;
-        }, OfferHelper::getOfferProducts());
-
         // Get the current cart item
         $cart_item = WC()->cart->get_cart()[$cart_item_key];
 
         // If the targeted product is in cart we remove the button link
-        if(in_array($cart_item['data']->get_id(), $offersProductsIds)) {
+        if(OfferHelper::isProductOffer($cart_item['data']->get_id())) {
             $button_link = '';
         }
 
@@ -259,9 +232,9 @@ class Offers_Public {
      * @param $product_quantity
      * @param $cart_item_key
      * @param $cart_item
-     * @return mixed|string
+     * @return mixed
      */
-    public function woocommerce_cart_item_quantity($product_quantity, $cart_item_key, $cart_item)
+    public function woocommerce_cart_item_quantity($product_quantity, $cart_item_key, $cart_item): mixed
     {
         if(is_cart() && OfferHelper::isProductOffer($cart_item['product_id'])) {
             $product_quantity = sprintf( '%2$s <input type="hidden" name="cart[%1$s][qty]" value="%2$s" />', $cart_item_key, $cart_item['quantity'] );
