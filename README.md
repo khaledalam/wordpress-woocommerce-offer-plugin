@@ -5,7 +5,10 @@
 [README Version 1](README_v1.md)<br />
 README Version 2 [current]
 
-Demo video:
+### Note:<br />This is POC, some corner test cases not handled such as change offer product id, or eligible category id of the offer while there are some carts with old offer products..
+
+
+V1 Demo video:
 
 
 https://github.com/khaledalam/wordpress-woocommerce-offer-plugin/assets/8682067/5f512a57-bc91-4191-9704-079c2753c0b6
