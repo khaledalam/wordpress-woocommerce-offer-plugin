@@ -10,7 +10,10 @@ README Version 2 [current]
 - [ ] Populate products in the select menu of offer product wc config and add validations for incorrect inputs
 - [ ] Validate preventing adding single offer product via [backend] e.g. curl or api call
 - [ ] Improve add&remove item to cart logic (regarding update offers items)
-- [ ] Cover translations 
+- [ ] Cover translations
+- [ ] Clean DB and remove any debugging or old unused wp options
+- [ ] Add Unit testing (e.g. PHPUnit)
+- [ ] Handle senario such as: delete offer -> add eligable product to cart -> restore offer -> add another eligable product to cart (add/remove cart logic)
 
 V1 Demo video:
 
