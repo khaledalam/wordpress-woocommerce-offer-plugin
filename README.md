@@ -5,8 +5,12 @@
 [README Version 1](README_v1.md)<br />
 README Version 2 [current]
 
-### Note:<br />This is POC, some corner test cases not handled such as change offer product id, or eligible category id of the offer while there are some carts with old offer products..
-
+### TODOs:
+- [ ] This is POC, some corner test cases not handled such as change offer product id, or eligible category id of the offer while there are some carts with old offer products..
+- [ ] Populate products in the select menu of offer product wc config and add validations for incorrect inputs
+- [ ] Validate preventing adding single offer product via [backend] e.g. curl or api call
+- [ ] Improve add&remove item to cart logic (regarding update offers items)
+- [ ] Cover translations 
 
 V1 Demo video:
 
